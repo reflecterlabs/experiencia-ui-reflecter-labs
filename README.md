@@ -38,28 +38,6 @@ El stack tecnológico de Reflecter Labs está diseñado para la máxima eficienc
 
 ---
 
-## 🚀 Inicio Rápido para Desarrolladores
-
-### Requisitos Previos
-- Node.js 18+
-- pnpm / npm / yarn
-
-### Instalación
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/reflecterlabs/experiencia-ui-reflecter-labs.git
-   ```
-2. Instalar dependencias:
-   ```bash
-   pnpm install
-   ```
-3. Iniciar entorno de desarrollo:
-   ```bash
-   pnpm dev
-   ```
-
----
-
 ## 📍 Ubicación y Contacto
 
 Nos encontramos en **Córdoba, Argentina**, operando como un centro neurálgico para el talento tech de la región.

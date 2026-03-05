@@ -1,5 +1,5 @@
 import React from "react"
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
@@ -11,6 +11,12 @@ import Script from "next/script";
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+};
+
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://reflecterlabs.xyz'),
@@ -24,7 +30,6 @@ export const metadata: Metadata = {
     generator: 'v0.app',
     keywords: ['Blockchain', 'AI Agents', 'MOLTX', 'Starknet', 'Argentina', 'Agentic Infrastructure', 'DeFi', 'Smart Contracts', 'Web3 Development', 'Starknet Córdoba', 'Blockchain Argentina', 'Blockchain Latam', 'Auditoría Smart Contracts', 'Desarrollo dApps'],
     referrer: 'origin-when-cross-origin',
-    viewport: 'width=device-width, initial-scale=1',
     robots: {
         index: true,
         follow: true,
