@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
@@ -11,8 +13,11 @@ import GlobantLogoIcon from "@/components/icons/globant-logo-icon";
 import DecryptedText from "@/components/DecryptedText";
 import { transitionVariants } from "@/lib/utils";
 import LanyardWithControls from "@/components/lanyard-with-controls";
+import { useLocale } from "@/lib/i18n/locale-context";
 
 export default function HeroSection() {
+    const { t } = useLocale();
+
     return (
         <main className="overflow-x-hidden">
             <section className='lg:h-screen'>
@@ -22,7 +27,7 @@ export default function HeroSection() {
                         <div className="mx-auto max-w-2xl text-center lg:ml-0 lg:text-left">
                             <div className='mt-8 lg:mt-16'>
                                 <DecryptedText
-                                    text="Contratos inteligentes, dApps y soluciones DeFi"
+                                    text={t.hero.subtitle}
                                     animateOn="view"
                                     revealDirection="start"
                                     sequential
@@ -31,20 +36,22 @@ export default function HeroSection() {
                                     className='font-mono text-muted-foreground bg-black rounded-md uppercase'
                                 />
                             </div>
-                            <TextEffect
-                                preset="fade-in-blur"
-                                speedSegment={0.3}
-                                as="h1"
-                                className="max-w-2xl text-balance text-6xl font-semibold md:text-7xl xl:text-8xl">
-                                LABORATORIO
-                            </TextEffect>
-                            <TextEffect
-                                preset="fade-in-blur"
-                                speedSegment={0.3}
-                                as="h1"
-                                className="max-w-2xl text-balance text-6xl font-semibold md:text-7xl xl:text-8xl">
-                                BLOCKCHAIN
-                            </TextEffect>
+                            <h1 className="max-w-2xl text-balance text-6xl font-semibold md:text-7xl xl:text-8xl tracking-tighter">
+                                <TextEffect
+                                    preset="fade-in-blur"
+                                    speedSegment={0.3}
+                                    as="span"
+                                    className="block">
+                                    {t.hero.title1}
+                                </TextEffect>
+                                <TextEffect
+                                    preset="fade-in-blur"
+                                    speedSegment={0.3}
+                                    as="span"
+                                    className="block">
+                                    {t.hero.title2}
+                                </TextEffect>
+                            </h1>
                             <TextEffect
                                 per="line"
                                 preset="fade-in-blur"
@@ -52,7 +59,7 @@ export default function HeroSection() {
                                 delay={0.5}
                                 as="p"
                                 className="mt-8 max-w-2xl text-pretty text-lg text-muted-foreground bg-black p-1 rounded-md">
-                                Somos la disrupcion de la centralizacion y el temor de los ecosistemas burocraticos.
+                                {t.hero.description}
                             </TextEffect>
                             <AnimatedGroup
                                 variants={{
@@ -72,8 +79,8 @@ export default function HeroSection() {
                                     asChild
                                     size="lg"
                                     className="px-5 text-base">
-                                    <Link href="#link">
-                                        <span className="text-nowrap">Reserva una llamada</span>
+                                    <Link href={t.common.calendarLink} target="_blank" rel="noopener noreferrer">
+                                        <span className="text-nowrap">{t.common.bookCall}</span>
                                     </Link>
                                 </Button>
                             </AnimatedGroup>
@@ -103,7 +110,7 @@ export default function HeroSection() {
 
                     <div className="flex flex-col items-center md:flex-row">
                         <div className="md:max-w-44 md:border-r md:pr-6">
-                            <p className="text-end text-sm font-mono uppercase">Supported by</p>
+                            <p className="text-end text-sm font-mono uppercase">{t.common.supportedBy}</p>
                         </div>
                         <div className="relative py-6 md:w-[calc(100%-11rem)]">
                             <InfiniteSlider

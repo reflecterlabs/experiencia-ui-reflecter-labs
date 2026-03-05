@@ -2,26 +2,29 @@
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import React from 'react'
+import React, { useState } from 'react'
 import { LanguageSwitcher } from '@/components/language-switcher'
 import { useLocale } from '@/lib/i18n/locale-context'
+import GrintaPopup from './GrintaPopup'
 
 export const HeroHeader = () => {
     const [menuState, setMenuState] = React.useState(false)
+    const [isGrintaOpen, setIsGrintaOpen] = useState(false)
     const { t } = useLocale()
+
     return (
         <header>
             <nav
                 data-state={menuState && 'active'}
-                className="bg-background/50 fixed z-20 w-full border-b backdrop-blur-3xl">
+                className="bg-background/50 fixed z-[60] w-full border-b backdrop-blur-3xl">
                 <div className="mx-auto max-w-6xl px-6 transition-all duration-300">
                     <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
                         <div className="flex w-full items-center justify-between gap-12 lg:w-auto">
                             <Link
                                 href="/"
                                 aria-label="home"
-                                className="flex items-center space-x-2">
-                                <span className='font-mono'>REFLECTER LABS</span>
+                                className="flex items-center space-x-2 transition-all hover:scale-105 active:scale-95">
+                                <span className='font-mono font-bold tracking-tight'>REFLECTER LABS</span>
                             </Link>
 
                             <button
@@ -39,17 +42,18 @@ export const HeroHeader = () => {
                             <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit sm:items-center">
                                 <LanguageSwitcher />
                                 <Button
-                                    asChild
-                                    size="sm">
-                                    <Link href="https://meetup-sdk.vercel.com/">
-                                        <span>{t.common.hostEvent}</span>
-                                    </Link>
+                                    onClick={() => setIsGrintaOpen(true)}
+                                    size="sm"
+                                    className="bg-[#00FF85] text-black font-mono font-bold tracking-widest uppercase hover:bg-[#00FF85]/90 hover:scale-105 active:scale-95 transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,255,133,0.3)]"
+                                >
+                                    <span>{t.common.hostEvent}</span>
                                 </Button>
                             </div>
                         </div>
                     </div>
                 </div>
             </nav>
+            <GrintaPopup isOpen={isGrintaOpen} onClose={() => setIsGrintaOpen(false)} />
         </header>
     )
 }

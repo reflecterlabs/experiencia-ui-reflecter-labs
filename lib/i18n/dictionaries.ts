@@ -19,8 +19,17 @@ const dictionaries = {
       messageSent: "Mensaje enviado",
       sendAnother: "Enviar otro mensaje",
       bookCall: "Reserva una llamada",
-      hostEvent: "Agenda una reunión",
+      hostEvent: "Grinta Protocol",
       supportedBy: "Apoyado por",
+      calendarLink: "https://calendar.app.google/4NF4hz9LoGGok2gdA",
+    },
+    grintaPopup: {
+      title: "Grinta Protocol",
+      description: "Grinta es un protocolo de liquidez de última generación diseñado para optimizar el capital en múltiples cadenas. Estamos construyendo el futuro de la eficiencia financiera descentralizada.",
+      waitlistTitle: "Únete a la lista de espera",
+      waitlistPlaceholder: "tu@email.com",
+      button: "Unirse ahora",
+      success: "¡Gracias! Te hemos añadido a la lista de espera.",
     },
     hero: {
       subtitle: "Contratos inteligentes, dApps y soluciones DeFi",
@@ -58,6 +67,8 @@ const dictionaries = {
       readMore: "Leer artículo",
       goToBlog: "Ir al blog completo",
       minRead: "min de lectura",
+      comingSoon: "Contenido del artículo próximamente.",
+      noPostFound: "Artículo no encontrado.",
     },
     cta: {
       heading: "Agenda una llamada con nuestro equipo",
@@ -78,15 +89,16 @@ const dictionaries = {
       cookiePolicy: "Política de Cookies",
       viewAllChains: "Ver Todas las Cadenas",
       rights: "Todos los derechos reservados.",
+      location: "Córdoba, ARGENTINA",
     },
     about: {
       title: "Sobre Nosotros",
-      intro: "Reflecter Labs es un laboratorio de tecnología blockchain con sede en Córdoba, Argentina. Diseñamos y desarrollamos infraestructura, smart contracts y soluciones multi-chain para el ecosistema Web3.",
-      intro2: "Nuestro equipo combina experiencia en ingeniería de software, criptografía y diseño de producto para crear herramientas que impulsen la adopción de la tecnología descentralizada a nivel global.",
+      intro: "Reflecter Labs es un laboratorio de tecnología con sede en Córdoba, Argentina, especializado en infraestructura blockchain y sistemas agénticos. Diseñamos y desarrollamos el futuro de la autonomía digital mediante MOLTX y soluciones multi-chain para el ecosistema Web3.",
+      intro2: "Nuestro equipo combina ingeniería de vanguardia, criptografía y orquestación de agentes IA para crear herramientas que impulsen la soberanía digital y la automatización inteligente a nivel global.",
       mission: "Misión",
-      missionDesc: "Acelerar la adopción de blockchain construyendo infraestructura robusta, segura y accesible para desarrolladores y empresas en todo el mundo.",
+      missionDesc: "Acelerar la transición hacia un mundo agéntico construyendo infraestructura robusta, segura y autónoma para que agentes y humanos interactúen en la blockchain.",
       vision: "Visión",
-      visionDesc: "Un ecosistema descentralizado donde la tecnología blockchain sea tan accesible y confiable como la infraestructura tradicional de internet.",
+      visionDesc: "Un ecosistema interconectado donde agentes IA y humanos operen sobre una base tecnológica descentralizada, confiable y eficiente.",
       valuesTitle: "Nuestros Valores",
       values: [
         { title: "Innovación", description: "Exploramos constantemente nuevas tecnologías y paradigmas para ofrecer soluciones que marquen la diferencia en el ecosistema blockchain." },
@@ -107,6 +119,7 @@ const dictionaries = {
         { tag: "Identidad", title: "Identidad Descentralizada (DID)", description: "Construimos sistemas de identidad digital soberana que permiten a los usuarios controlar sus datos sin intermediarios.", chains: ["Starknet", "Ethereum"] },
         { tag: "Gaming", title: "Gaming & Metaverso", description: "Desarrollamos infraestructura on-chain para juegos Web3, economías de tokens in-game y assets interoperables.", chains: ["Monad", "BNB", "Avalanche"] },
         { tag: "Tokenización", title: "Tokenización de Activos del Mundo Real (RWA)", description: "Facilitamos la tokenización de activos reales como inmuebles, arte y commodities para inversión fraccionada.", chains: ["Ethereum", "Polygon", "Avalanche"] },
+        { tag: "Agentic", title: "Infraestructura de Agentes & MOLTX", description: "Desarrollamos MOLTX (Multi-Agent Orchestration Layer), una capa de orquestación para agentes IA soberanos que interactúan con protocolos blockchain de forma autónoma.", chains: ["Starknet", "Base", "Ethereum"] },
       ],
     },
     contact: {
@@ -175,6 +188,7 @@ const dictionaries = {
         date: "2026-02-28",
         category: "Tecnología",
         readTime: 8,
+        image: "/blog/starknet.webp",
       },
       {
         slug: "smart-contracts-seguridad",
@@ -183,6 +197,7 @@ const dictionaries = {
         date: "2026-02-20",
         category: "Seguridad",
         readTime: 12,
+        image: "/blog/security.webp",
       },
       {
         slug: "defi-latam",
@@ -191,6 +206,7 @@ const dictionaries = {
         date: "2026-02-10",
         category: "DeFi",
         readTime: 10,
+        image: "/blog/defi-latam.webp",
       },
       {
         slug: "tokenizacion-activos-reales",
@@ -199,6 +215,7 @@ const dictionaries = {
         date: "2026-01-28",
         category: "Tokenización",
         readTime: 9,
+        image: "/blog/rwa.webp",
       },
       {
         slug: "monad-evm-paralelo",
@@ -207,6 +224,7 @@ const dictionaries = {
         date: "2026-01-15",
         category: "Tecnología",
         readTime: 7,
+        image: "/blog/monad.webp",
       },
       {
         slug: "identidad-descentralizada",
@@ -215,6 +233,7 @@ const dictionaries = {
         date: "2026-01-05",
         category: "Identidad",
         readTime: 11,
+        image: "/blog/did.webp",
       },
     ],
   },
@@ -228,8 +247,17 @@ const dictionaries = {
       messageSent: "Message sent",
       sendAnother: "Send another message",
       bookCall: "Book a call",
-      hostEvent: "Schedule a meeting",
+      hostEvent: "Grinta Protocol",
       supportedBy: "Supported by",
+      calendarLink: "https://calendar.app.google/4NF4hz9LoGGok2gdA",
+    },
+    grintaPopup: {
+      title: "Grinta Protocol",
+      description: "Grinta is a next-generation liquidity protocol designed to optimize capital across multiple chains. We are building the future of decentralized financial efficiency.",
+      waitlistTitle: "Join the waitlist",
+      waitlistPlaceholder: "you@email.com",
+      button: "Join now",
+      success: "Thank you! You've been added to the waitlist.",
     },
     hero: {
       subtitle: "Smart contracts, dApps and DeFi solutions",
@@ -267,6 +295,8 @@ const dictionaries = {
       readMore: "Read article",
       goToBlog: "Go to full blog",
       minRead: "min read",
+      comingSoon: "Full article content coming soon.",
+      noPostFound: "Article not found.",
     },
     cta: {
       heading: "Schedule a call with our team",
@@ -287,15 +317,16 @@ const dictionaries = {
       cookiePolicy: "Cookie Policy",
       viewAllChains: "View All Chains",
       rights: "All rights reserved.",
+      location: "Córdoba, ARGENTINA",
     },
     about: {
       title: "About Us",
-      intro: "Reflecter Labs is a blockchain technology laboratory based in Córdoba, Argentina. We design and develop infrastructure, smart contracts and multi-chain solutions for the Web3 ecosystem.",
-      intro2: "Our team combines expertise in software engineering, cryptography and product design to create tools that drive the adoption of decentralized technology globally.",
+      intro: "Reflecter Labs is a technology laboratory based in Córdoba, Argentina, specializing in blockchain infrastructure and agentic systems. We design and develop the future of digital autonomy through MOLTX and multi-chain solutions for the Web3 ecosystem.",
+      intro2: "Our team combines cutting-edge engineering, cryptography, and AI agent orchestration to create tools that drive digital sovereignty and intelligent automation globally.",
       mission: "Mission",
-      missionDesc: "Accelerate blockchain adoption by building robust, secure and accessible infrastructure for developers and businesses worldwide.",
+      missionDesc: "Accelerate the transition to an agentic world by building robust, secure, and autonomous infrastructure for agents and humans to interact on the blockchain.",
       vision: "Vision",
-      visionDesc: "A decentralized ecosystem where blockchain technology is as accessible and reliable as traditional internet infrastructure.",
+      visionDesc: "An interconnected ecosystem where AI agents and humans operate on a decentralized, reliable, and efficient technological foundation.",
       valuesTitle: "Our Values",
       values: [
         { title: "Innovation", description: "We constantly explore new technologies and paradigms to deliver solutions that make a difference in the blockchain ecosystem." },
@@ -316,6 +347,7 @@ const dictionaries = {
         { tag: "Identity", title: "Decentralized Identity (DID)", description: "We build sovereign digital identity systems that allow users to control their data without intermediaries.", chains: ["Starknet", "Ethereum"] },
         { tag: "Gaming", title: "Gaming & Metaverse", description: "We develop on-chain infrastructure for Web3 games, in-game token economies and interoperable assets.", chains: ["Monad", "BNB", "Avalanche"] },
         { tag: "Tokenization", title: "Real World Asset Tokenization (RWA)", description: "We facilitate the tokenization of real assets like real estate, art and commodities for fractional investment.", chains: ["Ethereum", "Polygon", "Avalanche"] },
+        { tag: "Agentic", title: "Agentic Infrastructure & MOLTX", description: "We develop MOLTX (Multi-Agent Orchestration Layer), an orchestration layer for sovereign AI agents that interact with blockchain protocols autonomously.", chains: ["Starknet", "Base", "Ethereum"] },
       ],
     },
     contact: {
@@ -384,6 +416,7 @@ const dictionaries = {
         date: "2026-02-28",
         category: "Technology",
         readTime: 8,
+        image: "/blog/starknet.webp",
       },
       {
         slug: "smart-contracts-seguridad",
@@ -392,6 +425,7 @@ const dictionaries = {
         date: "2026-02-20",
         category: "Security",
         readTime: 12,
+        image: "/blog/security.webp",
       },
       {
         slug: "defi-latam",
@@ -400,6 +434,7 @@ const dictionaries = {
         date: "2026-02-10",
         category: "DeFi",
         readTime: 10,
+        image: "/blog/defi-latam.webp",
       },
       {
         slug: "tokenizacion-activos-reales",
@@ -408,6 +443,7 @@ const dictionaries = {
         date: "2026-01-28",
         category: "Tokenization",
         readTime: 9,
+        image: "/blog/rwa.webp",
       },
       {
         slug: "monad-evm-paralelo",
@@ -416,6 +452,7 @@ const dictionaries = {
         date: "2026-01-15",
         category: "Technology",
         readTime: 7,
+        image: "/blog/monad.webp",
       },
       {
         slug: "identidad-descentralizada",
@@ -424,6 +461,7 @@ const dictionaries = {
         date: "2026-01-05",
         category: "Identity",
         readTime: 11,
+        image: "/blog/did.webp",
       },
     ],
   },
@@ -437,8 +475,17 @@ const dictionaries = {
       messageSent: "Mensagem enviada",
       sendAnother: "Enviar outra mensagem",
       bookCall: "Agendar uma chamada",
-      hostEvent: "Agendar uma reunião",
+      hostEvent: "Grinta Protocol",
       supportedBy: "Apoiado por",
+      calendarLink: "https://calendar.app.google/4NF4hz9LoGGok2gdA",
+    },
+    grintaPopup: {
+      title: "Grinta Protocol",
+      description: "O Grinta é um protocolo de liquidez de última geração projetado para otimizar o capital em várias cadeias. Estamos construindo o futuro da eficiência financeira descentralizada.",
+      waitlistTitle: "Junte-se à lista de espera",
+      waitlistPlaceholder: "seu@email.com",
+      button: "Entrar agora",
+      success: "Obrigado! Você foi adicionado à lista de espera.",
     },
     hero: {
       subtitle: "Contratos inteligentes, dApps e soluções DeFi",
@@ -476,6 +523,8 @@ const dictionaries = {
       readMore: "Ler artigo",
       goToBlog: "Ir ao blog completo",
       minRead: "min de leitura",
+      comingSoon: "Conteúdo completo do artigo em breve.",
+      noPostFound: "Artigo não encontrado.",
     },
     cta: {
       heading: "Agende uma chamada com nossa equipe",
@@ -496,15 +545,16 @@ const dictionaries = {
       cookiePolicy: "Política de Cookies",
       viewAllChains: "Ver Todas as Cadeias",
       rights: "Todos os direitos reservados.",
+      location: "Córdoba, ARGENTINA",
     },
     about: {
       title: "Sobre Nós",
-      intro: "Reflecter Labs é um laboratório de tecnologia blockchain sediado em Córdoba, Argentina. Projetamos e desenvolvemos infraestrutura, smart contracts e soluções multi-chain para o ecossistema Web3.",
-      intro2: "Nossa equipe combina experiência em engenharia de software, criptografia e design de produto para criar ferramentas que impulsionem a adoção da tecnologia descentralizada globalmente.",
+      intro: "Reflecter Labs é um laboratório de tecnología com sede em Córdoba, Argentina, especializado em infraestrutura blockchain e sistemas agênticos. Projetamos e desenvolvemos o futuro da autonomia digital através do MOLTX e soluções multi-chain para o ecossistema Web3.",
+      intro2: "Nossa equipe combina engenharia de ponta, criptografia e orquestração de agentes de IA para criar ferramentas que impulsionam a soberania digital e a automação inteligente globalmente.",
       mission: "Missão",
-      missionDesc: "Acelerar a adoção de blockchain construindo infraestrutura robusta, segura e acessível para desenvolvedores e empresas em todo o mundo.",
+      missionDesc: "Acelerar a transição para um mundo agêntico construindo infraestrutura robusta, segura e autônoma para que agentes e humanos interajam na blockchain.",
       vision: "Visão",
-      visionDesc: "Um ecossistema descentralizado onde a tecnologia blockchain seja tão acessível e confiável quanto a infraestrutura tradicional da internet.",
+      visionDesc: "Um ecossistema interconectado onde agentes de IA e humanos operam em uma base tecnológica descentralizada, confiável e eficiente.",
       valuesTitle: "Nossos Valores",
       values: [
         { title: "Inovação", description: "Exploramos constantemente novas tecnologias e paradigmas para oferecer soluções que façam a diferença no ecossistema blockchain." },
@@ -525,6 +575,7 @@ const dictionaries = {
         { tag: "Identidade", title: "Identidade Descentralizada (DID)", description: "Construímos sistemas de identidade digital soberana que permitem aos usuários controlar seus dados sem intermediários.", chains: ["Starknet", "Ethereum"] },
         { tag: "Gaming", title: "Gaming & Metaverso", description: "Desenvolvemos infraestrutura on-chain para jogos Web3, economias de tokens in-game e assets interoperáveis.", chains: ["Monad", "BNB", "Avalanche"] },
         { tag: "Tokenização", title: "Tokenização de Ativos do Mundo Real (RWA)", description: "Facilitamos a tokenização de ativos reais como imóveis, arte e commodities para investimento fracionado.", chains: ["Ethereum", "Polygon", "Avalanche"] },
+        { tag: "Agentic", title: "Infraestrutura de Agentes & MOLTX", description: "Desenvolvemos o MOLTX (Multi-Agent Orchestration Layer), uma camada de orquestração para agentes de IA soberanos que interagem com protocolos blockchain de forma autônoma.", chains: ["Starknet", "Base", "Ethereum"] },
       ],
     },
     contact: {
@@ -593,6 +644,7 @@ const dictionaries = {
         date: "2026-02-28",
         category: "Tecnologia",
         readTime: 8,
+        image: "/blog/starknet.webp",
       },
       {
         slug: "smart-contracts-seguridad",
@@ -601,6 +653,7 @@ const dictionaries = {
         date: "2026-02-20",
         category: "Segurança",
         readTime: 12,
+        image: "/blog/security.webp",
       },
       {
         slug: "defi-latam",
@@ -609,6 +662,7 @@ const dictionaries = {
         date: "2026-02-10",
         category: "DeFi",
         readTime: 10,
+        image: "/blog/defi-latam.webp",
       },
       {
         slug: "tokenizacion-activos-reales",
@@ -617,6 +671,7 @@ const dictionaries = {
         date: "2026-01-28",
         category: "Tokenização",
         readTime: 9,
+        image: "/blog/rwa.webp",
       },
       {
         slug: "monad-evm-paralelo",
@@ -625,6 +680,7 @@ const dictionaries = {
         date: "2026-01-15",
         category: "Tecnologia",
         readTime: 7,
+        image: "/blog/monad.webp",
       },
       {
         slug: "identidad-descentralizada",
@@ -633,13 +689,22 @@ const dictionaries = {
         date: "2026-01-05",
         category: "Identidade",
         readTime: 11,
+        image: "/blog/did.webp",
       },
     ],
   },
 } as const;
 
-export type Dictionary = typeof dictionaries.es;
+type DeepString<T> = {
+  [K in keyof T]: T[K] extends string
+  ? string
+  : T[K] extends readonly any[]
+  ? T[K]
+  : DeepString<T[K]>
+};
+
+export type Dictionary = DeepString<typeof dictionaries.es>;
 
 export function getDictionary(locale: Locale): Dictionary {
-  return dictionaries[locale] || dictionaries[defaultLocale];
+  return (dictionaries[locale] || dictionaries[defaultLocale]) as unknown as Dictionary;
 }

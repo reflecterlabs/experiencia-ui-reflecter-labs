@@ -1,11 +1,16 @@
+"use client";
+
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { CircleDollarSignIcon, EarthIcon, UsersIcon } from 'lucide-react'
 import React, { ReactNode } from 'react'
 import { TextEffect } from "@/components/motion-primitives/text-effect";
 import { transitionVariants } from "@/lib/utils";
 import { AnimatedGroup } from "@/components/motion-primitives/animated-group";
+import { useLocale } from "@/lib/i18n/locale-context";
 
 export default function Features() {
+    const { t } = useLocale();
+
     return (
         <section className="py-16 md:py-32 dark:bg-transparent bg-transparent">
             <div className="@container mx-auto max-w-5xl px-6">
@@ -16,7 +21,7 @@ export default function Features() {
                         speedSegment={0.3}
                         as="h2"
                         className="text-balance text-4xl font-semibold lg:text-5xl">
-                        LOS PRINCIPIOS QUE GUIAN CADA LINEA DE CODIGO QUE ESCRIBIMOS Y CADA DESICION QUE TOMAMOS
+                        {t.features.heading}
                     </TextEffect>
                 </div>
                 <AnimatedGroup
@@ -44,11 +49,11 @@ export default function Features() {
                                     />
                                 </CardDecorator>
 
-                                <h3 className="mt-6 font-medium text-xl">EL CODIGO ES LEY</h3>
+                                <h3 className="mt-6 font-medium text-xl">{t.features.codeIsLaw}</h3>
                             </CardHeader>
 
                             <CardContent>
-                                <p className="text-sm text-muted-foreground">Es la verdad absoluta. Sin excusas, sin término medio. La lógica y la ejecución son lo que importa y forman parte de nuestra cultura empresarial.</p>
+                                <p className="text-sm text-muted-foreground">{t.features.codeIsLawDesc}</p>
                             </CardContent>
                         </div>
 
@@ -61,11 +66,11 @@ export default function Features() {
                                     />
                                 </CardDecorator>
 
-                                <h3 className="mt-6 font-medium text-xl">NO STATUS QUO</h3>
+                                <h3 className="mt-6 font-medium text-xl">{t.features.noStatusQuo}</h3>
                             </CardHeader>
 
                             <CardContent>
-                                <p className="text-sm text-muted-foreground">No aceptamos las cosas tal y como son solo porque siempre han sido así. Cuestionamos todo y buscamos mejores caminos.</p>
+                                <p className="text-sm text-muted-foreground">{t.features.noStatusQuoDesc}</p>
                             </CardContent>
                         </div>
 
@@ -78,11 +83,11 @@ export default function Features() {
                                     />
                                 </CardDecorator>
 
-                                <h3 className="mt-6 font-medium text-xl">CAPITALISMO</h3>
+                                <h3 className="mt-6 font-medium text-xl">{t.features.capitalism}</h3>
                             </CardHeader>
 
                             <CardContent>
-                                <p className="text-sm text-muted-foreground">Creemos en los incentivos, los mercados abiertos y el valor genuinamente generado. La meritocracia funciona cuando las reglas son claras.</p>
+                                <p className="text-sm text-muted-foreground">{t.features.capitalismDesc}</p>
                             </CardContent>
                         </div>
                     </Card>

@@ -39,7 +39,7 @@ const CardTemplate = forwardRef<CardTemplateRef, CardTemplateProps>(
       canvas.width = CANVAS_SIZE;
       canvas.height = CANVAS_SIZE;
       const ctx = canvas.getContext("2d");
-      
+
       if (!ctx) return;
 
       // Draw base card image (fills entire canvas)
@@ -57,7 +57,7 @@ const CardTemplate = forwardRef<CardTemplateRef, CardTemplateProps>(
         ctx.font = 'normal 48px "Geist Mono", monospace';
         ctx.textAlign = "right";
         ctx.textBaseline = "middle";
-        
+
         const textX = (CANVAS_SIZE / 2) - 55;
         const textY = CANVAS_SIZE - 400;
         ctx.fillText(userName.toUpperCase(), textX, textY);
@@ -101,7 +101,7 @@ const CardTemplate = forwardRef<CardTemplateRef, CardTemplateProps>(
       fullCanvas.width = CANVAS_SIZE;
       fullCanvas.height = CANVAS_SIZE;
       const fullCtx = fullCanvas.getContext("2d");
-      
+
       if (!fullCtx) return;
 
       // Draw base card image (fills entire canvas)
@@ -119,7 +119,7 @@ const CardTemplate = forwardRef<CardTemplateRef, CardTemplateProps>(
         fullCtx.font = 'normal 48px "Geist Mono", monospace';
         fullCtx.textAlign = "right";
         fullCtx.textBaseline = "middle";
-        
+
         const textX = (CANVAS_SIZE / 2) - 55;
         const textY = CANVAS_SIZE - 400;
         fullCtx.fillText(userName.toUpperCase(), textX, textY);

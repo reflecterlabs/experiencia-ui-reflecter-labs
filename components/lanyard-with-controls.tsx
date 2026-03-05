@@ -46,7 +46,7 @@ export default function LanyardWithControls({
       <div className="flex flex-col">
         <CardTemplate
           ref={cardTemplateRef}
-          userName=""
+          userName={defaultName}
           variant={defaultVariant}
           onTextureReady={handleTextureReady}
         />
@@ -64,7 +64,7 @@ export default function LanyardWithControls({
       {/* Hidden card template for texture generation */}
       <CardTemplate
         ref={cardTemplateRef}
-        userName=""
+        userName={defaultName}
         variant={defaultVariant}
         onTextureReady={handleTextureReady}
       />
