@@ -22,7 +22,7 @@ export default function HeroSection() {
                         <div className="mx-auto max-w-2xl text-center lg:ml-0 lg:text-left">
                             <div className='mt-8 lg:mt-16'>
                                 <DecryptedText
-                                    text="Contratos inteligentes, dApps, soluciones DeFi y blockchain full-stack para ecosistemas, protocolos y equipos."
+                                    text="Contratos inteligentes, dApps y soluciones DeFi"
                                     animateOn="view"
                                     revealDirection="start"
                                     sequential
@@ -36,14 +36,14 @@ export default function HeroSection() {
                                 speedSegment={0.3}
                                 as="h1"
                                 className="max-w-2xl text-balance text-6xl font-semibold md:text-7xl xl:text-8xl">
-                                REFLECTER
+                                LABORATORIO
                             </TextEffect>
                             <TextEffect
                                 preset="fade-in-blur"
                                 speedSegment={0.3}
                                 as="h1"
                                 className="max-w-2xl text-balance text-6xl font-semibold md:text-7xl xl:text-8xl">
-                                LABS
+                                BLOCKCHAIN
                             </TextEffect>
                             <TextEffect
                                 per="line"
@@ -52,7 +52,7 @@ export default function HeroSection() {
                                 delay={0.5}
                                 as="p"
                                 className="mt-8 max-w-2xl text-pretty text-lg text-muted-foreground bg-black p-1 rounded-md">
-                                Laboratorio tecnologico enfocado en la disrupcion decentralizada, inteligencia artificial y protocolos privados.
+                                Somos la disrupcion de la centralizacion y el temor de los ecosistemas burocraticos.
                             </TextEffect>
                             <AnimatedGroup
                                 variants={{

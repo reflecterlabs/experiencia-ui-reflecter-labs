@@ -1,65 +1,102 @@
-import {Button} from '@/components/ui/button'
-import Link from 'next/link'
-import {TextEffect} from "./motion-primitives/text-effect"
-import {AnimatedGroup} from "@/components/motion-primitives/animated-group";
-import {transitionVariants} from "@/lib/utils";
+import Image from "next/image";
+import { TextEffect } from "./motion-primitives/text-effect";
+import { AnimatedGroup } from "@/components/motion-primitives/animated-group";
+import { transitionVariants } from "@/lib/utils";
+
+const founders = [
+  {
+    name: "Founder Name",
+    role: "Co-Founder & CEO",
+    image: "/images/founder-1.jpg",
+    bio: "Short description about this founder and their role in the company.",
+  },
+  {
+    name: "Founder Name",
+    role: "Co-Founder & CTO",
+    image: "/images/founder-2.jpg",
+    bio: "Short description about this founder and their role in the company.",
+  },
+  {
+    name: "Founder Name",
+    role: "Co-Founder & COO",
+    image: "/images/founder-3.jpg",
+    bio: "Short description about this founder and their role in the company.",
+  },
+  {
+    name: "Founder Name",
+    role: "Co-Founder & CPO",
+    image: "/images/founder-4.jpg",
+    bio: "Short description about this founder and their role in the company.",
+  },
+];
 
 export default function CallToAction() {
-    return (
-        <section className="py-16 mx-2">
-            <div className="mx-auto max-w-5xl rounded-3xl border px-6 py-12 md:py-20 lg:py-32">
-                <div className="text-center">
-                    <TextEffect
-                        triggerOnView
-                        preset="fade-in-blur"
-                        speedSegment={0.3}
-                        as="h2"
-                        className="text-balance text-4xl font-semibold lg:text-5xl">
-                        Don't miss a spot!
-                    </TextEffect>
-                    <TextEffect
-                        triggerOnView
-                        preset="fade-in-blur"
-                        speedSegment={0.3}
-                        delay={0.3}
-                        as="p"
-                        className="mt-4 text-muted-foreground">
-                        We have limited availability, register now in the link below.
-                    </TextEffect>
-                    <AnimatedGroup
-                        triggerOnView
-                        variants={{
-                            container: {
-                                visible: {
-                                    transition: {
-                                        staggerChildren: 0.05,
-                                        delayChildren: 0.75,
-                                    },
-                                },
-                            },
-                            ...transitionVariants,
-                        }}
-                        className="mt-12 flex flex-wrap justify-center gap-4"
-                    >
-                        <Button
-                            asChild
-                            size="lg">
-                            <Link href="#">
-                                <span>Register</span>
-                            </Link>
-                        </Button>
+  return (
+    <section className="py-16 mx-2">
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="text-center mb-12">
+          <TextEffect
+            triggerOnView
+            preset="fade-in-blur"
+            speedSegment={0.3}
+            as="h2"
+            className="text-balance text-4xl font-semibold lg:text-5xl"
+          >
+            Meet the Founders
+          </TextEffect>
+          <TextEffect
+            triggerOnView
+            preset="fade-in-blur"
+            speedSegment={0.3}
+            delay={0.3}
+            as="p"
+            className="mt-4 text-muted-foreground"
+          >
+            The team behind the vision.
+          </TextEffect>
+        </div>
 
-                        <Button
-                            asChild
-                            size="lg"
-                            variant="outline">
-                            <Link href="#">
-                                <span>Contact the Host</span>
-                            </Link>
-                        </Button>
-                    </AnimatedGroup>
-                </div>
+        <AnimatedGroup
+          triggerOnView
+          variants={{
+            container: {
+              visible: {
+                transition: {
+                  staggerChildren: 0.1,
+                  delayChildren: 0.5,
+                },
+              },
+            },
+            ...transitionVariants,
+          }}
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          {founders.map((founder) => (
+            <div
+              key={founder.name + founder.role}
+              className="group rounded-2xl border border-border bg-card p-4 text-center transition-colors hover:border-foreground/20"
+            >
+              <div className="relative mx-auto mb-4 aspect-square w-full overflow-hidden rounded-xl">
+                <Image
+                  src={founder.image}
+                  alt={founder.name}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <h3 className="font-semibold text-foreground text-lg">
+                {founder.name}
+              </h3>
+              <p className="mt-1 text-sm font-medium text-muted-foreground">
+                {founder.role}
+              </p>
+              <p className="mt-2 text-sm text-muted-foreground/80 leading-relaxed">
+                {founder.bio}
+              </p>
             </div>
-        </section>
-    )
+          ))}
+        </AnimatedGroup>
+      </div>
+    </section>
+  );
 }

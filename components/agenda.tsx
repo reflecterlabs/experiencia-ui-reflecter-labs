@@ -1,7 +1,7 @@
-import {TextEffect} from "@/components/motion-primitives/text-effect";
+import { TextEffect } from "@/components/motion-primitives/text-effect";
 import React from "react";
-import {transitionVariants} from "@/lib/utils";
-import {AnimatedGroup} from "@/components/motion-primitives/animated-group";
+import { transitionVariants } from "@/lib/utils";
+import { AnimatedGroup } from "@/components/motion-primitives/animated-group";
 
 export default function Agenda() {
     return (
@@ -15,7 +15,7 @@ export default function Agenda() {
                             speedSegment={0.3}
                             as="h2"
                             className="mb-4 text-3xl font-semibold md:text-4xl">
-                            Agenda
+                            Hoja de Ruta
                         </TextEffect>
                     </div>
 
@@ -36,32 +36,31 @@ export default function Agenda() {
                     >
                         <div className="pb-6">
                             <div className="font-medium space-x-2">
-                                <span className='text-muted-foreground font-mono '>11:00</span>
-                                <span>Welcome Video</span>
+                                <span className='text-muted-foreground font-mono '>Q1</span>
+                                <span>Conformacion de Sociedad</span>
                             </div>
-                            <p className="text-muted-foreground mt-4">A special welcome from the v0 Team</p>
+                            <p className="text-muted-foreground mt-4">Acuerdo pre-societario, alta de sociedad y publicación en boletín oficial.</p>
                         </div>
                         <div className="py-6">
                             <div className="font-medium space-x-2">
-                                <span className='text-muted-foreground font-mono '>11:30</span>
-                                <span>Build Time!</span>
+                                <span className='text-muted-foreground font-mono '>Q2</span>
+                                <span>Alianzas Estratégicas</span>
                             </div>
-                            <p className="text-muted-foreground mt-4">Hands on to build your project with v0.</p>
+                            <p className="text-muted-foreground mt-4">Acuerdos de alianzas estratégicas para impulsar la decentralización y el ecosistema web3 en latioamérica.</p>
                         </div>
                         <div className="py-6">
                             <div className="font-medium space-x-2">
-                                <span className='text-muted-foreground font-mono '>13:00</span>
-                                <span>Showcase Sprint</span>
+                                <span className='text-muted-foreground font-mono '>Q3</span>
+                                <span>Inversión en poder de computo</span>
                             </div>
-                            <p className="text-muted-foreground mt-4">Show a quick presentation of what you built.</p>
+                            <p className="text-muted-foreground mt-4">Inyeccion de capital en la ampliacion de poder de computo para el desarrollo eficiente en el laboratorio tecnológico.</p>
                         </div>
                         <div className="py-6">
                             <div className="font-medium space-x-2">
-                                <span className='text-muted-foreground font-mono '>13:30</span>
-                                <span>Networking and Event Close</span>
+                                <span className='text-muted-foreground font-mono '>Q4</span>
+                                <span>Consolidación de Productos Solicitados</span>
                             </div>
-                            <p className="text-muted-foreground mt-4">Take some time to interact with other and share
-                                ideas.</p>
+                            <p className="text-muted-foreground mt-4">Pre-validación y validación del mercado para la capitalización de cada producto en específico.</p>
                         </div>
                     </AnimatedGroup>
                 </div>
