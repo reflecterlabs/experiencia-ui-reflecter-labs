@@ -25,7 +25,7 @@ const dictionaries = {
     },
     grintaPopup: {
       title: "Grinta Protocol",
-      description: "Grinta es un protocolo de liquidez de última generación diseñado para optimizar el capital en múltiples cadenas. Estamos construyendo el futuro de la eficiencia financiera descentralizada.",
+      description: "Es un protocolo DeFI repaldado por sintéticos de Bitcoin que pueden reaccionar a shocks exógenos del mercado en tiempo real, garantizando la solvencia y la estabilidad algorítmica con una latencia mínima permitiendo crear infraestructuras financieras verdaderamente autónomas.",
       waitlistTitle: "Únete a la lista de espera",
       waitlistPlaceholder: "tu@email.com",
       button: "Unirse ahora",
