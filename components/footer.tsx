@@ -3,21 +3,24 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 const navigation = {
   company: [
-    { name: "About", href: "#" },
-    { name: "Team", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Blog", href: "#" },
+    { name: "Sobre Nosotros", href: "/about" },
+    { name: "Casos de Uso", href: "/use-cases" },
+    { name: "Contacto", href: "/contact" },
   ],
-  product: [
-    { name: "Features", href: "#" },
-    { name: "Pricing", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "Changelog", href: "#" },
+  chains: [
+    { name: "Starknet", href: "#" },
+    { name: "Ethereum", href: "#" },
+    { name: "Base", href: "#" },
+    { name: "Polygon", href: "#" },
+    { name: "BNB", href: "#" },
+    { name: "Avalanche", href: "#" },
+    { name: "Monad", href: "#" },
+    { name: "View All Chains", href: "#" },
   ],
   legal: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
-    { name: "Cookie Policy", href: "#" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Cookie Policy", href: "/cookies" },
   ],
 };
 
@@ -74,7 +77,7 @@ export default function FooterSection() {
               </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Building the future of technology, one product at a time.
+              Construyendo el futuro de la tecnología, un producto a la vez.
             </p>
 
             <div className="mt-6 flex flex-col gap-3">
@@ -83,18 +86,18 @@ export default function FooterSection() {
                 className="group flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Mail className="h-4 w-4" />
-                <span>hello@reflecterlabs.com</span>
+                <span>contact@reflecterlabs.xyz</span>
               </a>
               <a
                 href="tel:+1234567890"
                 className="group flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Phone className="h-4 w-4" />
-                <span>+1 (234) 567-890</span>
+                <span>+5491173661972</span>
               </a>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 shrink-0" />
-                <span>San Francisco, CA</span>
+                <span>Córdoba, ARGENTINA</span>
               </div>
             </div>
           </div>
@@ -120,10 +123,10 @@ export default function FooterSection() {
             </div>
             <div>
               <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-foreground">
-                Product
+                Cadenas
               </h3>
               <ul className="mt-4 flex flex-col gap-3" role="list">
-                {navigation.product.map((item) => (
+                {navigation.chains.map((item) => (
                   <li key={item.name}>
                     <Link
                       href={item.href}
