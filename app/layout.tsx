@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: 'Laboratorio de tecnología en Córdoba, Argentina. Especialistas en Contratos inteligentes, dApps y soluciones DeFi con enfoque en sistemas agénticos y MOLTX.',
     applicationName: 'Reflecter Labs',
     authors: [{ name: 'Reflecter Labs Team' }],
-    generator: 'v0.app',
+    generator: 'Reflecter Labs',
     keywords: ['Blockchain', 'AI Agents', 'MOLTX', 'Starknet', 'Argentina', 'Agentic Infrastructure', 'DeFi', 'Smart Contracts', 'Web3 Development', 'Starknet Córdoba', 'Blockchain Argentina', 'Blockchain Latam', 'Auditoría Smart Contracts', 'Desarrollo dApps'],
     referrer: 'origin-when-cross-origin',
     robots: {
@@ -77,20 +77,8 @@ export const metadata: Metadata = {
         'moltx-enabled': 'true',
     },
     icons: {
-        icon: [
-            {
-                url: '/icon-light-32x32.png',
-                media: '(prefers-color-scheme: light)',
-            },
-            {
-                url: '/icon-dark-32x32.png',
-                media: '(prefers-color-scheme: dark)',
-            },
-            {
-                url: '/icon.svg',
-                type: 'image/svg+xml',
-            },
-        ],
+        icon: '/icon-dark-32x32.png',
+        shortcut: '/icon-dark-32x32.png',
         apple: '/apple-icon.png',
     },
 }
