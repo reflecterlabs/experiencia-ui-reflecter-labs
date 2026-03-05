@@ -22,7 +22,7 @@ export default function HeroSection() {
                         <div className="mx-auto max-w-2xl text-center lg:ml-0 lg:text-left">
                             <div className='mt-8 lg:mt-16'>
                                 <DecryptedText
-                                    text="Thursday February 5th, 2026 - New York City"
+                                    text="Contratos inteligentes, dApps, soluciones DeFi y blockchain full-stack para ecosistemas, protocolos y equipos."
                                     animateOn="view"
                                     revealDirection="start"
                                     sequential
@@ -36,14 +36,14 @@ export default function HeroSection() {
                                 speedSegment={0.3}
                                 as="h1"
                                 className="max-w-2xl text-balance text-6xl font-semibold md:text-7xl xl:text-8xl">
-                                Prompt to
+                                REFLECTER
                             </TextEffect>
                             <TextEffect
                                 preset="fade-in-blur"
                                 speedSegment={0.3}
                                 as="h1"
                                 className="max-w-2xl text-balance text-6xl font-semibold md:text-7xl xl:text-8xl">
-                                Production
+                                LABS
                             </TextEffect>
                             <TextEffect
                                 per="line"
@@ -52,8 +52,7 @@ export default function HeroSection() {
                                 delay={0.5}
                                 as="p"
                                 className="mt-8 max-w-2xl text-pretty text-lg text-muted-foreground bg-black p-1 rounded-md">
-                                v0 is getting ready to launch its biggest product update yet. We're celebrating with
-                                v0 IRLs around the world.
+                                Laboratorio tecnologico enfocado en la disrupcion decentralizada, inteligencia artificial y protocolos privados.
                             </TextEffect>
                             <AnimatedGroup
                                 variants={{
@@ -74,17 +73,7 @@ export default function HeroSection() {
                                     size="lg"
                                     className="px-5 text-base">
                                     <Link href="#link">
-                                        <span className="text-nowrap">Register Now</span>
-                                    </Link>
-                                </Button>
-                                <Button
-                                    key={2}
-                                    asChild
-                                    size="lg"
-                                    variant="ghost"
-                                    className="px-5 text-base bg-black/30 backdrop-blur-sm hover:bg-black/40">
-                                    <Link href="#link">
-                                        <span className="text-nowrap">Contact Host</span>
+                                        <span className="text-nowrap">Reserva una llamada</span>
                                     </Link>
                                 </Button>
                             </AnimatedGroup>
