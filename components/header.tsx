@@ -2,14 +2,12 @@
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import React, { useState } from 'react'
+import React from 'react'
 import { LanguageSwitcher } from '@/components/language-switcher'
 import { useLocale } from '@/lib/i18n/locale-context'
-import GrintaPopup from './GrintaPopup'
 
 export const HeroHeader = () => {
     const [menuState, setMenuState] = React.useState(false)
-    const [isGrintaOpen, setIsGrintaOpen] = useState(false)
     const { t } = useLocale()
 
     return (
@@ -41,19 +39,19 @@ export const HeroHeader = () => {
                             className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
                             <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit sm:items-center">
                                 <LanguageSwitcher />
-                                <Button
-                                    onClick={() => setIsGrintaOpen(true)}
-                                    size="sm"
-                                    className="bg-[#00FF85] text-black font-mono font-bold tracking-widest uppercase hover:bg-[#00FF85]/90 hover:scale-105 active:scale-95 transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,255,133,0.3)]"
-                                >
-                                    <span>{t.common.hostEvent}</span>
-                                </Button>
+                                <Link href="https://grinta-prototype-ui.vercel.app/app/wallet">
+                                    <Button
+                                        size="sm"
+                                        className="bg-[#00FF00] text-black font-mono font-bold tracking-widest uppercase hover:bg-[#00FF00]/90 hover:scale-105 active:scale-95 transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,255,0,0.3)]"
+                                    >
+                                        <span>{t.common.hostEvent}</span>
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </nav>
-            <GrintaPopup isOpen={isGrintaOpen} onClose={() => setIsGrintaOpen(false)} />
         </header>
     )
 }
