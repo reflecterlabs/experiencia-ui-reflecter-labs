@@ -4,13 +4,13 @@ import { useLocale } from "@/lib/i18n/locale-context";
 import { TextEffect } from "./motion-primitives/text-effect";
 import { AnimatedGroup } from "@/components/motion-primitives/animated-group";
 import { transitionVariants } from "@/lib/utils";
-import { Calendar } from "lucide-react";
+import Script from "next/script";
 
 export default function CallToAction() {
     const { t } = useLocale();
 
     return (
-        <section className="py-24 md:py-32 relative overflow-hidden">
+        <section id="reservar-llamada" className="py-24 md:py-32 relative overflow-hidden">
             <div className="absolute inset-0 bg-primary/5 -z-10" />
             <div className="mx-auto max-w-5xl px-6 text-center">
                 <AnimatedGroup
@@ -43,18 +43,23 @@ export default function CallToAction() {
                     <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-2xl">
                         {t.cta.description}
                     </p>
-                    <a
-                        href={t.common.calendarLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group relative inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background font-mono text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:bg-foreground/90 hover:scale-105 shadow-xl hover:shadow-2xl"
-                    >
-                        <Calendar className="h-5 w-5" />
-                        {t.cta.button}
-                        <span className="absolute inset-0 bg-white/10 opacity-0 transition-opacity group-hover:opacity-100" />
-                    </a>
                 </AnimatedGroup>
             </div>
+
+            {/* Calendly inline widget — full width */}
+            <div className="w-full mt-4">
+                <div
+                    className="calendly-inline-widget"
+                    data-url="https://calendly.com/reflecterlabs/30min"
+                    style={{ minWidth: "320px", height: "700px" }}
+                />
+            </div>
+
+            {/* Calendly script */}
+            <Script
+                src="https://assets.calendly.com/assets/external/widget.js"
+                strategy="lazyOnload"
+            />
         </section>
     );
 }

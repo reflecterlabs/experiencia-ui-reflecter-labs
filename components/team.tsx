@@ -24,8 +24,18 @@ const founders = [
   },
   {
     name: "Alex Rosenfeld",
-    role: "Co-Founder & CO",
+    role: "Chief Compliance Officer",
     image: "/images/founder-4.jpeg",
+  },
+  {
+    name: "Dámaris Cepeda",
+    role: "Chief Marketing Officer",
+    image: "/images/damaris.jpg",
+  },
+  {
+    name: "Facundo Más",
+    role: "Chief Sales Officer",
+    image: "/images/facundo.jpg",
   },
 ];
 
@@ -63,7 +73,7 @@ export default function Team() {
             },
             ...transitionVariants,
           }}
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3"
         >
           {founders.map((founder) => (
             <div

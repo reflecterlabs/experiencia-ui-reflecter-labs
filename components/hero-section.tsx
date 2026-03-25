@@ -71,14 +71,23 @@ export default function HeroSection() {
                                     },
                                     ...transitionVariants,
                                 }}
-                                className="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start"
+                                className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start"
                             >
                                 <Button
                                     asChild
                                     size="lg"
-                                    className="px-5 text-base">
-                                    <Link href={t.common.calendarLink} target="_blank" rel="noopener noreferrer">
-                                        <span className="text-nowrap">{t.common.bookCall}</span>
+                                    className="px-8 text-base rounded-full shadow-lg shadow-white/10 hover:shadow-white/20 active:scale-95 transition-all">
+                                    <Link href="/#reservar-llamada">
+                                        <span className="text-nowrap">{t.cta.button}</span>
+                                    </Link>
+                                </Button>
+
+                                <Button
+                                    asChild
+                                    size="lg"
+                                    className="px-8 text-base rounded-full bg-[#00FF85] text-black font-bold hover:bg-[#00FF85]/90 hover:shadow-[0_0_20px_rgba(0,255,133,0.3)] active:scale-95 transition-all">
+                                    <Link href="https://grinta.reflecterlabs.xyz/" target="_blank" rel="noopener noreferrer">
+                                        <span className="text-nowrap">{t.hero.grintaButton}</span>
                                     </Link>
                                 </Button>
                             </AnimatedGroup>
@@ -90,6 +99,7 @@ export default function HeroSection() {
                         defaultName="" />
                 </div>
             </section>
+
             <section className="bg-background pb-16 md:pb-32">
                 <AnimatedGroup
                     variants={{
@@ -105,7 +115,6 @@ export default function HeroSection() {
                     }}
                     className="group relative m-auto max-w-6xl px-6"
                 >
-
                     <div className="flex flex-col items-center md:flex-row">
                         <div className="md:max-w-44 md:border-r md:pr-6">
                             <p className="text-end text-sm font-mono uppercase">{t.common.supportedBy}</p>
