@@ -3,9 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
-import Dither from "@/components/Dither";
-import FooterSection from "@/components/footer";
-import { HeroHeader } from "@/components/header";
+import { LayoutWrapper } from "@/components/layout-wrapper";
 import { LocaleProvider } from "@/lib/i18n/locale-context";
 import Script from "next/script";
 
@@ -117,22 +115,9 @@ export default function RootLayout({
                     }}
                 />
                 <LocaleProvider>
-                    <div className='absolute w-full h-dvh max-h-155 sm:max-h-115 md:max-h-125 lg:max-h-190 xl:max-h-195'>
-                        <Dither
-                            waveColor={[0.30980392156862746, 0.30980392156862746, 0.30980392156862746]}
-                            disableAnimation={false}
-                            enableMouseInteraction
-                            mouseRadius={0.3}
-                            colorNum={4}
-                            pixelSize={2}
-                            waveAmplitude={0.3}
-                            waveFrequency={3}
-                            waveSpeed={0.05}
-                        />
-                    </div>
-                    <HeroHeader />
-                    {children}
-                    <FooterSection />
+                    <LayoutWrapper>
+                        {children}
+                    </LayoutWrapper>
                 </LocaleProvider>
                 <Analytics />
             </body>

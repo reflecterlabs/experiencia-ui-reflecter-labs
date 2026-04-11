@@ -8,7 +8,17 @@ export const localeNames: Record<Locale, string> = {
   pt: "Português",
 };
 
-const dictionaries = {
+export interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  category: string;
+  readTime: number;
+  image?: string;
+}
+
+export const dictionaries = {
   es: {
     common: {
       readMore: "Leer más",
@@ -26,12 +36,49 @@ const dictionaries = {
         home: "Inicio",
         community: "Comunidad",
         education: "Educación",
-        education_courses: "Cursos",
+        education_courses: "Academia",
         education_coursesDesc: "Formación en blockchain e inteligencia artificial",
         education_webinars: "Webinars",
         education_webinarsDesc: "Sesiones en vivo y grabadas",
+        solutions: {
+          title: "Soluciones",
+          cdp: {
+            title: "CDP",
+            desc: "Plataforma unificada de datos de clientes",
+          },
+          rwa: {
+            title: "RWA",
+            desc: "Tokenización de activos del mundo real",
+          },
+          tokenizacion: {
+            title: "Tokenización",
+            desc: "Activos digitales y economía programable",
+          },
+          fintech: {
+            title: "Fintech y Pagos",
+            desc: "Infraestructura financiera de nueva generación",
+          },
+          defi: {
+            title: "DeFi",
+            desc: "Finanzas descentralizadas sin intermediarios",
+          },
+          trading: {
+            title: "Trading",
+            desc: "Ejecución algorítmica y estrategias on-chain",
+          },
+          agentes: {
+            title: "Agentes Autónomos",
+            desc: "IA soberana operando en blockchain",
+          },
+          page: {
+            title: "En desarrollo",
+            subtitle: "Estamos construyendo esta solución. Pronto más información.",
+          },
+        },
         research: {
           title: "Investigación",
+          laboratory: "Laboratorio",
+          laboratoryDesc: "Innovación y desarrollo tecnológico",
           kbGraphs: "KB Graphs",
           kbGraphsDesc: "Visualización de Base de Conocimiento",
           blog: "Blog",
@@ -76,6 +123,38 @@ const dictionaries = {
       q4Title: "Consolidación de Productos Solicitados",
       q4Desc: "Pre-validación y validación del mercado para la capitalización de cada producto en específico.",
     },
+    cta: {
+      heading: "Agenda una llamada con nuestro equipo",
+      description: "Conversemos sobre tu proyecto. Nuestro equipo de expertos está listo para ayudarte a construir soluciones blockchain a medida.",
+      button: "Reservar llamada",
+    },
+    impact: {
+      heading: "RESPONSABILIDAD SOCIAL Y PROPÓSITO",
+      title: "MÁS QUE ECONOMÍA, SOMOS IMPACTO",
+      subtitle: "Nuestra visión siempre ha estado alineada con el planeta. Destinamos el 10% de nuestra facturación anual a proyectos que transforman el mañana.",
+      items: [
+        {
+          title: "Reforestación Global",
+          description: "Plantación masiva de árboles en zonas críticamente deforestadas para restaurar pulmones naturales."
+        },
+        {
+          title: "Agua es Vida",
+          description: "Infraestructura para llevar agua potable a comunidades que carecen de este recurso vital."
+        },
+        {
+          title: "Centros de Datos Aeroespaciales",
+          description: "Lanzamiento de infraestructura en el espacio para procesar IA de forma sostenible y soberana."
+        },
+        {
+          title: "Seguridad Post-Cuántica",
+          description: "Desarrollo de criptografía avanzada para garantizar la privacidad humana en el futuro digital."
+        },
+        {
+          title: "Computación Termodinámica",
+          description: "Hardware radicalmente más eficiente que las GPUs, reduciendo drásticamente la huella de carbono digital."
+        }
+      ]
+    },
     founders: {
       heading: "EL EQUIPO DETRÁS DE LA VISIÓN",
     },
@@ -88,11 +167,6 @@ const dictionaries = {
       minRead: "min de lectura",
       comingSoon: "Contenido del artículo próximamente.",
       noPostFound: "Artículo no encontrado.",
-    },
-    cta: {
-      heading: "Agenda una llamada con nuestro equipo",
-      description: "Conversemos sobre tu proyecto. Nuestro equipo de expertos está listo para ayudarte a construir soluciones blockchain a medida.",
-      button: "Reservar llamada",
     },
     footer: {
       tagline: "Construyendo el futuro de la tecnología blockchain, un producto a la vez.",
@@ -204,62 +278,7 @@ const dictionaries = {
         { title: "6. Contacto", content: "Si tiene preguntas sobre nuestro uso de cookies, contáctenos en: contact@reflecterlabs.xyz" },
       ],
     },
-    blogPosts: [
-      {
-        slug: "introduccion-starknet",
-        title: "Introducción a Starknet: El futuro del escalado de Ethereum",
-        excerpt: "Starknet utiliza pruebas STARK para escalar Ethereum de manera eficiente. Exploramos su arquitectura, ventajas y cómo desarrollar en este ecosistema.",
-        date: "2026-02-28",
-        category: "Tecnología",
-        readTime: 8,
-        image: "/blog/starknet.png",
-      },
-      {
-        slug: "smart-contracts-seguridad",
-        title: "Seguridad en Smart Contracts: Mejores prácticas para 2026",
-        excerpt: "Los smart contracts manejan millones de dólares. Analizamos las vulnerabilidades más comunes y las mejores prácticas para escribir código seguro.",
-        date: "2026-02-20",
-        category: "Seguridad",
-        readTime: 12,
-        image: "/blog/security.png",
-      },
-      {
-        slug: "defi-latam",
-        title: "DeFi en Latinoamérica: Oportunidades y desafíos",
-        excerpt: "Latinoamérica es una de las regiones con mayor adopción de criptomonedas. Analizamos el panorama DeFi y las oportunidades para desarrolladores.",
-        date: "2026-02-10",
-        category: "DeFi",
-        readTime: 10,
-        image: "/blog/defi-latam.png",
-      },
-      {
-        slug: "tokenizacion-activos-reales",
-        title: "Tokenización de activos reales: La próxima revolución financiera",
-        excerpt: "La tokenización de RWA promete democratizar la inversión. Exploramos los protocolos, regulaciones y el futuro de los activos tokenizados.",
-        date: "2026-01-28",
-        category: "Tokenización",
-        readTime: 9,
-        image: "/blog/rwa.png",
-      },
-      {
-        slug: "monad-evm-paralelo",
-        title: "Monad: EVM paralelo y el futuro del rendimiento blockchain",
-        excerpt: "Monad promete ejecutar transacciones EVM en paralelo. Analizamos su diseño técnico y lo que significa para el ecosistema de desarrolladores.",
-        date: "2026-01-15",
-        category: "Tecnología",
-        readTime: 7,
-        image: "/blog/monad.png",
-      },
-      {
-        slug: "identidad-descentralizada",
-        title: "Identidad descentralizada: Control total sobre tus datos",
-        excerpt: "Los sistemas DID permiten a los usuarios ser dueños de su identidad digital. Exploramos los estándares, implementaciones y casos de uso.",
-        date: "2026-01-05",
-        category: "Identidad",
-        readTime: 11,
-        image: "/blog/did.png",
-      },
-    ],
+    blogPosts: [] as BlogPost[],
   },
   en: {
     common: {
@@ -278,12 +297,49 @@ const dictionaries = {
         home: "Home",
         community: "Community",
         education: "Education",
-        education_courses: "Courses",
+        education_courses: "Academy",
         education_coursesDesc: "Blockchain and artificial intelligence training",
         education_webinars: "Webinars",
         education_webinarsDesc: "Live and recorded sessions",
+        solutions: {
+          title: "Solutions",
+          cdp: {
+            title: "CDP",
+            desc: "Unified customer data platform",
+          },
+          rwa: {
+            title: "RWA",
+            desc: "Real world asset tokenization",
+          },
+          tokenizacion: {
+            title: "Tokenization",
+            desc: "Digital assets and programmable economy",
+          },
+          fintech: {
+            title: "Fintech & Payments",
+            desc: "Next-generation financial infrastructure",
+          },
+          defi: {
+            title: "DeFi",
+            desc: "Decentralized finance without intermediaries",
+          },
+          trading: {
+            title: "Trading",
+            desc: "Algorithmic execution and on-chain strategies",
+          },
+          agentes: {
+            title: "Autonomous Agents",
+            desc: "Sovereign AI operating on blockchain",
+          },
+          page: {
+            title: "Under development",
+            subtitle: "We're building this solution. More information coming soon.",
+          },
+        },
         research: {
           title: "Research",
+          laboratory: "Laboratory",
+          laboratoryDesc: "Innovation and technological development",
           kbGraphs: "KB Graphs",
           kbGraphsDesc: "Knowledge Base Visualization",
           blog: "Blog",
@@ -328,6 +384,38 @@ const dictionaries = {
       q4Title: "Product Consolidation",
       q4Desc: "Pre-validation and market validation for the capitalization of each specific product.",
     },
+    cta: {
+      heading: "Schedule a call with our team",
+      description: "Let's talk about your project. Our team of experts is ready to help you build custom blockchain solutions.",
+      button: "Book a call",
+    },
+    impact: {
+      heading: "SOCIAL RESPONSIBILITY & PURPOSE",
+      title: "MORE THAN ECONOMY, WE ARE IMPACT",
+      subtitle: "Our vision has always been aligned with the planet. We allocate 10% of our annual billing to projects that transform tomorrow.",
+      items: [
+        {
+          title: "Global Reforestation",
+          description: "Massive tree planting in critically deforested areas to restore natural lungs."
+        },
+        {
+          title: "Water is Life",
+          description: "Infrastructure to bring clean drinking water to communities lacking this vital resource."
+        },
+        {
+          title: "Aerospace Data Centers",
+          description: "Launching infrastructure into space to process AI sustainably and sovereignly."
+        },
+        {
+          title: "Post-Quantum Security",
+          description: "Development of advanced cryptography to ensure human privacy in the digital future."
+        },
+        {
+          title: "Thermodynamic Computing",
+          description: "Hardware radically more efficient than GPUs, drastically reducing the digital carbon footprint."
+        }
+      ]
+    },
     founders: {
       heading: "THE TEAM BEHIND THE VISION",
     },
@@ -340,11 +428,6 @@ const dictionaries = {
       minRead: "min read",
       comingSoon: "Full article content coming soon.",
       noPostFound: "Article not found.",
-    },
-    cta: {
-      heading: "Schedule a call with our team",
-      description: "Let's talk about your project. Our team of experts is ready to help you build custom blockchain solutions.",
-      button: "Book a call",
     },
     footer: {
       tagline: "Building the future of blockchain technology, one product at a time.",
@@ -456,62 +539,7 @@ const dictionaries = {
         { title: "6. Contact Us", content: "If you have questions about our cookie use, contact us at: contact@reflecterlabs.xyz" },
       ],
     },
-    blogPosts: [
-      {
-        slug: "introduccion-starknet",
-        title: "Introduction to Starknet: The future of Ethereum scaling",
-        excerpt: "Starknet uses STARK proofs to efficiently scale Ethereum. We explore its architecture, advantages and how to develop in this ecosystem.",
-        date: "2026-02-28",
-        category: "Technology",
-        readTime: 8,
-        image: "/blog/starknet.png",
-      },
-      {
-        slug: "smart-contracts-seguridad",
-        title: "Smart Contract Security: Best practices for 2026",
-        excerpt: "Smart contracts handle millions of dollars. We analyze the most common vulnerabilities and best practices for writing secure code.",
-        date: "2026-02-20",
-        category: "Security",
-        readTime: 12,
-        image: "/blog/security.png",
-      },
-      {
-        slug: "defi-latam",
-        title: "DeFi in Latin America: Opportunities and challenges",
-        excerpt: "Latin America is one of the regions with the highest crypto adoption. We analyze the DeFi landscape and opportunities for developers.",
-        date: "2026-02-10",
-        category: "DeFi",
-        readTime: 10,
-        image: "/blog/defi-latam.png",
-      },
-      {
-        slug: "tokenizacion-activos-reales",
-        title: "Real World Asset Tokenization: The next financial revolution",
-        excerpt: "RWA tokenization promises to democratize investment. We explore protocols, regulations and the future of tokenized assets.",
-        date: "2026-01-28",
-        category: "Tokenization",
-        readTime: 9,
-        image: "/blog/rwa.png",
-      },
-      {
-        slug: "monad-evm-paralelo",
-        title: "Monad: Parallel EVM and the future of blockchain performance",
-        excerpt: "Monad promises to execute EVM transactions in parallel. We analyze its technical design and what it means for developers.",
-        date: "2026-01-15",
-        category: "Technology",
-        readTime: 7,
-        image: "/blog/monad.png",
-      },
-      {
-        slug: "identidad-descentralizada",
-        title: "Decentralized Identity: Total control over your data",
-        excerpt: "DID systems allow users to own their digital identity. We explore standards, implementations and use cases.",
-        date: "2026-01-05",
-        category: "Identity",
-        readTime: 11,
-        image: "/blog/did.png",
-      },
-    ],
+    blogPosts: [] as BlogPost[],
   },
   pt: {
     common: {
@@ -530,12 +558,49 @@ const dictionaries = {
         home: "Início",
         community: "Comunidade",
         education: "Educação",
-        education_courses: "Cursos",
+        education_courses: "Academia",
         education_coursesDesc: "Formação em blockchain e inteligência artificial",
         education_webinars: "Webinars",
         education_webinarsDesc: "Sessões ao vivo e gravadas",
+        solutions: {
+          title: "Soluções",
+          cdp: {
+            title: "CDP",
+            desc: "Plataforma unificada de dados de clientes",
+          },
+          rwa: {
+            title: "RWA",
+            desc: "Tokenização de ativos do mundo real",
+          },
+          tokenizacion: {
+            title: "Tokenização",
+            desc: "Ativos digitais e economia programável",
+          },
+          fintech: {
+            title: "Fintech e Pagamentos",
+            desc: "Infraestrutura financeira de nova geração",
+          },
+          defi: {
+            title: "DeFi",
+            desc: "Finanças descentralizadas sem intermediários",
+          },
+          trading: {
+            title: "Trading",
+            desc: "Execução algorítmica e estratégias on-chain",
+          },
+          agentes: {
+            title: "Agentes Autônomos",
+            desc: "IA soberana operando na blockchain",
+          },
+          page: {
+            title: "Em desenvolvimento",
+            subtitle: "Estamos construindo esta solução. Mais informações em breve.",
+          },
+        },
         research: {
           title: "Pesquisa",
+          laboratory: "Laboratório",
+          laboratoryDesc: "Inovação e desenvolvimento tecnológico",
           kbGraphs: "KB Graphs",
           kbGraphsDesc: "Visualização da Base de Conhecimento",
           blog: "Blog",
@@ -580,6 +645,38 @@ const dictionaries = {
       q4Title: "Consolidação de Produtos Solicitados",
       q4Desc: "Pré-validação e validação de mercado para a capitalização de cada produto específico.",
     },
+    cta: {
+      heading: "Agende uma chamada com nossa equipe",
+      description: "Vamos conversar sobre seu projeto. Nossa equipe de especialistas está pronta para ajudá-lo a construir soluções blockchain sob medida.",
+      button: "Agendar chamada",
+    },
+    impact: {
+      heading: "RESPONSABILIDADE SOCIAL E PROPÓSITO",
+      title: "MAIS QUE ECONOMIA, SOMOS IMPACTO",
+      subtitle: "Nossa visão sempre esteve alinhada com o planeta. Destinamos 10% do nosso faturamento anual para projetos que transformam o amanhã.",
+      items: [
+        {
+          title: "Reflorestamento Global",
+          description: "Plantio massivo de árvores em áreas criticamente desmatadas para restaurar pulmões naturais."
+        },
+        {
+          title: "Água é Vida",
+          description: "Infraestrutura para levar água potável a comunidades que carecem deste recurso vital."
+        },
+        {
+          title: "Centros de Dados Aeroespaciais",
+          description: "Lançamento de infraestrutura no espaço para processar IA de forma sustentável e soberana."
+        },
+        {
+          title: "Segurança Pós-Quântica",
+          description: "Desenvolvimento de criptografia avançada para garantir a privacidade humana no futuro digital."
+        },
+        {
+          title: "Computação Termodinâmica",
+          description: "Hardware radicalmente mais eficiente que as GPUs, reduzindo drasticamente a pegada de carbono digital."
+        }
+      ]
+    },
     founders: {
       heading: "A EQUIPE POR TRÁS DA VISÃO",
     },
@@ -592,11 +689,6 @@ const dictionaries = {
       minRead: "min de leitura",
       comingSoon: "Conteúdo completo do artigo em breve.",
       noPostFound: "Artigo não encontrado.",
-    },
-    cta: {
-      heading: "Agende uma chamada com nossa equipe",
-      description: "Vamos conversar sobre seu projeto. Nossa equipe de especialistas está pronta para ajudá-lo a construir soluções blockchain sob medida.",
-      button: "Agendar chamada",
     },
     footer: {
       tagline: "Construindo o futuro da tecnologia blockchain, um produto de cada vez.",

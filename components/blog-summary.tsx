@@ -11,6 +11,7 @@ export default function BlogSummary() {
     const { t } = useLocale();
     // Take only the first 3 posts for the summary
     const posts = t.blogPosts.slice(0, 3);
+    if (posts.length === 0) return null;
 
     return (
         <section className="py-16 md:py-32 bg-muted/30">

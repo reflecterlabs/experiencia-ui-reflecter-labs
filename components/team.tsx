@@ -9,17 +9,17 @@ import { useLocale } from "@/lib/i18n/locale-context";
 const founders = [
   {
     name: "Ignacio del Corro",
-    role: "Co-Founder & CEO",
+    role: "Co-Founder",
     image: "/images/founder-1.jpg",
   },
   {
     name: "Henry Rosales",
-    role: "Co-Founder & CTO",
+    role: "Co-Founder",
     image: "/images/founder-2.jpg",
   },
   {
     name: "Joaquin Cortez",
-    role: "Co-Founder & COO",
+    role: "Co-Founder",
     image: "/images/founder-3.jpg",
   },
   {

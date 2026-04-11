@@ -81,15 +81,6 @@ export default function HeroSection() {
                                         <span className="text-nowrap">{t.cta.button}</span>
                                     </Link>
                                 </Button>
-
-                                <Button
-                                    asChild
-                                    size="lg"
-                                    className="px-8 text-base rounded-full bg-[#00FF85] text-black font-bold hover:bg-[#00FF85]/90 hover:shadow-[0_0_20px_rgba(0,255,133,0.3)] active:scale-95 transition-all">
-                                    <Link href="https://grinta.reflecterlabs.xyz/" target="_blank" rel="noopener noreferrer">
-                                        <span className="text-nowrap">{t.hero.grintaButton}</span>
-                                    </Link>
-                                </Button>
                             </AnimatedGroup>
                         </div>
                     </div>
@@ -100,7 +91,8 @@ export default function HeroSection() {
                 </div>
             </section>
 
-            <section className="bg-background pb-16 md:pb-32">
+            {/* Supported by section - hidden */}
+            {/* <section className="bg-background pb-16 md:pb-32">
                 <AnimatedGroup
                     variants={{
                         container: {
@@ -150,7 +142,7 @@ export default function HeroSection() {
                         </div>
                     </div>
                 </AnimatedGroup>
-            </section>
+            </section> */}
         </main>
     )
 }
