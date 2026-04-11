@@ -31,7 +31,7 @@ export default function AuditoriaPage() {
         register,
         handleSubmit,
         control,
-        formState: { errors }
+        formState: { errors, isSubmitting }
     } = useForm<TechnicalAuditData>({
         resolver: zodResolver(TechnicalAuditSchema),
         defaultValues: {

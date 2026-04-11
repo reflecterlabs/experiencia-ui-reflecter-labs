@@ -39,7 +39,7 @@ export default function LoginForm() {
       return;
     }
 
-    if (data?.session || data?.user) {
+    if (data?.user) {
       router.push("/dashboard");
     }
   };
@@ -60,7 +60,7 @@ export default function LoginForm() {
       return;
     }
 
-    if (data?.session || data?.user) {
+    if (data?.user) {
       router.push("/dashboard");
     }
   };

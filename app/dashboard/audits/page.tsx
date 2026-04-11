@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { insforgeClient } from "@/lib/insforge/client";
 import { ClipboardCheck, Clock, Trash2, CheckCircle2, ChevronDown, ChevronUp } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -212,4 +212,3 @@ export default function AuditsPage() {
   );
 }
 
-import React from "react";

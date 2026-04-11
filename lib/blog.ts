@@ -17,7 +17,7 @@ export interface BlogPost {
 export async function getBlogPosts(locale: Locale = defaultLocale): Promise<BlogPost[]> {
   // Actualmente obtenemos los posts del diccionario estático
   const dictionary = dictionaries[locale];
-  return dictionary.blogPosts || [];
+  return [...(dictionary.blogPosts || [])];
 }
 
 export async function getBlogPostBySlug(slug: string, locale: Locale = defaultLocale): Promise<BlogPost | undefined> {

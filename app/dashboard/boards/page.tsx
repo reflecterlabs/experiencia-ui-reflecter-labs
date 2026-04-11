@@ -17,22 +17,22 @@ export default function BoardsPage() {
   }, []);
 
   const fetchBoards = async () => {
-    const res = await insforgeClient.auth.getCurrentUser();
-    const user = res.data?.user || res.data;
-    if (res.error || !user || !user.id) {
+    const { data, error } = await insforgeClient.auth.getCurrentUser();
+    const user = data?.user;
+    if (error || !user) {
       window.location.href = "/login";
       return;
     }
 
-    const { data: boardsData, error } = await insforgeClient.database
+    const { data: boardsData, error: dbError } = await insforgeClient.database
       .from("kanban_boards")
       .select("*")
       .order("created_at", { ascending: false });
 
-    if (!error && boardsData) {
+    if (!dbError && boardsData) {
       setBoards(boardsData as Board[]);
-    } else if (error) {
-      alert("Error al cargar tableros: " + error.message);
+    } else if (dbError) {
+      alert("Error al cargar tableros: " + dbError.message);
     }
     setLoading(false);
   };
@@ -41,9 +41,9 @@ export default function BoardsPage() {
     e.preventDefault();
     if (!newBoardTitle.trim()) return;
 
-    const userResponse = await insforgeClient.auth.getCurrentUser();
-    const user = userResponse.data?.user || userResponse.data;
-    if (userResponse.error || !user || !user.id) {
+    const { data: userData, error: userError } = await insforgeClient.auth.getCurrentUser();
+    const user = userData?.user;
+    if (userError || !user) {
       alert("Tu sesión ha expirado. Por favor, reingresa.");
       window.location.href = "/login";
       return;

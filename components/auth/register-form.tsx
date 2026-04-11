@@ -29,7 +29,7 @@ export default function RegisterForm() {
       return;
     }
 
-    if (data?.session) {
+    if (data?.accessToken) {
       router.push("/dashboard");
     } else {
       setIsVerifying(true);
@@ -53,7 +53,7 @@ export default function RegisterForm() {
       return;
     }
 
-    if (data?.session || data?.user) {
+    if (data?.accessToken || data?.user) {
       router.push("/dashboard");
     }
   };
