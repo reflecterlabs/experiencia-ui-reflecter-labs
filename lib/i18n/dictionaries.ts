@@ -952,7 +952,7 @@ export const dictionaries = {
     roadmap: {
       heading: "路线图",
       q1Title: "公司成立",
-      q1Desc: "签订公司成立前协议、公司注册并在官方公告。 ",
+      q1Desc: "签订公司成立前协议、公司注册及官方公告。",
       q1Status: "已完成",
       q2Title: "战略联盟",
       q2Desc: "达成战略联盟协议，整合 Grinta Protocol 作为基础架构，推动拉丁美洲的去中心化和 Web3 生态系统发展。",
@@ -1039,7 +1039,7 @@ export const dictionaries = {
         { title: "社区", description: "我们为社区而建，并与社区共同建设。协作和反馈是我们发展的动力。" },
       ],
       teamTitle: "团队",
-      teamDesc: "我们是一支多学科团队，由对去中心化技术充满热情的工程师、设计师和战略家组成. 在首页了解我们的创始人。",
+      teamDesc: "我们是一支多学科团队，由对去中心化技术充满热情的工程师、设计师和战略家组成。在首页了解我们的创始人。",
     },
     useCases: {
       title: "使用案例",
@@ -1100,16 +1100,16 @@ export const dictionaries = {
         { title: "2. 服务描述", content: "Reflecter Labs 在包括 Starknet、Ethereum、Base、Polygon、BNB、Avalanche 和 Monad 在内的多个链上提供区块链基础设施、智能合约开发和相关技术服务。" },
         { title: "3. 用户义务", content: "您必须年满 18 岁，对您的账户和钱包凭证的安全性负责，不得将我们的服务用于非法目的，并对您账户下的所有活动负责。" },
         { title: "4. 知识产权", content: "本平台上的所有内容、代码、设计和商标均为 Reflecter Labs 或其许可方的财产。" },
-        { title: "5. 区块链与智能合约", content: "您承认区块链交易是不可逆的. 对于因智能合约交互、网络故障 or 用户错误导致的损失，Reflecter Labs 概不负责。" },
+        { title: "5. 区块链与智能合约", content: "您承认区块链交易是不可逆的。对于因智能合约交互、网络故障或用户错误导致的损失，Reflecter Labs 概不负责。" },
         { title: "6. 责任限制", content: "在法律允许的最大范围内，Reflecter Labs 不对任何间接、附带、特别或后果性损害负责。" },
         { title: "7. 适用法律", content: "这些条款受阿根廷共和国法律管辖，不考虑其冲突法条款。" },
-        { title: "8. 联系我们", content: "有关 these terms 的问题，请联系我们：contact@reflecterlabs.xyz" },
+        { title: "8. 联系我们", content: "有关本条款的问题，请联系我们：contact@reflecterlabs.xyz" },
       ],
     },
     cookies: {
       title: "Cookie 政策",
       sections: [
-        { title: "1. 什么是 Cookie", content: "Cookie 是在您访问网站时存储在您设备上的小型文本文件. 它们帮助我们识别您的浏览器、记住您的偏好并了解您如何与我们的平台互动。" },
+        { title: "1. 什么是 Cookie", content: "Cookie 是在您访问网站时存储在您设备上的小型文本文件。它们帮助我们识别您的浏览器、记住您的偏好并了解您如何与我们的平台互动。" },
         { title: "2. 我们使用的 Cookie 类型", content: "我们使用基本 Cookie（操作所需）、分析 Cookie（了解使用情况）、功能 Cookie（记住偏好），目前不使用营销 Cookie。" },
         { title: "3. 第三方 Cookie", content: "某些 Cookie 可能会由分析提供商等第三方服务放置. 我们无法控制这些 Cookie。" },
         { title: "4. 管理 Cookie", content: "您可以通过浏览器设置控制和管理 Cookie. 请注意，禁用某些 Cookie 可能会影响网站功能。" },
@@ -1131,6 +1131,13 @@ type DeepString<T> = {
 
 export type Dictionary = DeepString<typeof dictionaries.es>;
 
+const dictionaryCache: Partial<Record<Locale, Dictionary>> = {};
+
 export function getDictionary(locale: Locale): Dictionary {
-  return (dictionaries[locale] || dictionaries[defaultLocale]) as unknown as Dictionary;
+  if (dictionaryCache[locale]) {
+    return dictionaryCache[locale]!;
+  }
+  const dictionary = (dictionaries[locale] || dictionaries[defaultLocale]) as unknown as Dictionary;
+  dictionaryCache[locale] = dictionary;
+  return dictionary;
 }

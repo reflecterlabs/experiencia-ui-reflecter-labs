@@ -14,7 +14,7 @@ import LanyardWithControls from "@/components/lanyard-with-controls";
 import { useLocale } from "@/lib/i18n/locale-context";
 
 export default function HeroSection() {
-    const { t } = useLocale();
+    const { t, locale } = useLocale();
 
     return (
         <main className="overflow-x-hidden">
@@ -31,7 +31,7 @@ export default function HeroSection() {
                                     sequential
                                     useOriginalCharsOnly={false}
                                     speed={70}
-                                    className='font-mono text-muted-foreground bg-black rounded-md uppercase'
+                                    className={`font-mono text-muted-foreground bg-black rounded-md ${locale === 'zh' ? '' : 'uppercase'}`}
                                 />
                             </div>
                             <h1 className="max-w-2xl text-balance text-6xl font-semibold md:text-7xl xl:text-8xl tracking-tighter">

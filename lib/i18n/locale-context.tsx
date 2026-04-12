@@ -17,7 +17,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const saved = typeof window !== "undefined" ? localStorage.getItem("locale") as Locale | null : null;
-    if (saved && (saved === "es" || saved === "en" || saved === "pt")) {
+    if (saved && (saved === "es" || saved === "en" || saved === "pt" || saved === "zh")) {
       setLocaleState(saved);
       setT(getDictionary(saved));
     }

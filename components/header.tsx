@@ -11,7 +11,7 @@ export const HeroHeader = () => {
     const [educationOpen, setEducationOpen] = React.useState(false)
     const [solutionsOpen, setSolutionsOpen] = React.useState(false)
     const [researchOpen, setResearchOpen] = React.useState(false)
-    const { t } = useLocale()
+    const { t, locale } = useLocale()
 
     const closeAll = () => {
         setMenuState(false)
@@ -67,7 +67,9 @@ export const HeroHeader = () => {
                                 <button
                                     onClick={() => setSolutionsOpen(!solutionsOpen)}
                                     className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-                                    <span className={solutionsOpen ? 'text-primary' : ''}>{t.common.nav.solutions.title}</span>
+                                    <span className={(solutionsOpen ? 'text-primary' : '') + (locale === 'zh' ? '' : ' uppercase')}>
+                                        {t.common.nav.solutions.title}
+                                    </span>
                                     <ChevronDown className={`size-4 transition-transform duration-300 ${solutionsOpen ? 'rotate-180 text-primary' : ''}`} />
                                 </button>
 
@@ -83,7 +85,7 @@ export const HeroHeader = () => {
                                                     onClick={() => setSolutionsOpen(false)}>
                                                     <Icon className="size-5 mt-0.5 shrink-0 text-muted-foreground group-hover/item:text-foreground transition-colors" />
                                                     <div>
-                                                        <span className="text-sm font-medium group-hover/item:text-foreground transition-colors uppercase tracking-tight">
+                                                        <span className={`text-sm font-medium group-hover/item:text-foreground transition-colors tracking-tight ${locale === 'zh' ? '' : 'uppercase'}`}>
                                                             {t.common.nav.solutions[sol.key].title}
                                                         </span>
                                                         <span className="block text-[10px] text-muted-foreground">
@@ -105,7 +107,9 @@ export const HeroHeader = () => {
                                 <button
                                     onClick={() => setEducationOpen(!educationOpen)}
                                     className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-                                    <span className={educationOpen ? 'text-primary' : ''}>{t.common.nav.education}</span>
+                                    <span className={(educationOpen ? 'text-primary' : '') + (locale === 'zh' ? '' : ' uppercase')}>
+                                        {t.common.nav.education}
+                                    </span>
                                     <ChevronDown className={`size-4 transition-transform duration-300 ${educationOpen ? 'rotate-180 text-primary' : ''}`} />
                                 </button>
 
@@ -117,7 +121,7 @@ export const HeroHeader = () => {
                                             onClick={() => setEducationOpen(false)}>
                                             <GraduationCap className="size-5 mt-0.5 shrink-0 text-muted-foreground group-hover/item:text-foreground transition-colors" />
                                             <div>
-                                                <span className="text-sm font-medium group-hover/item:text-foreground transition-colors uppercase tracking-tight">{t.common.nav.education_courses}</span>
+                                                <span className={`text-sm font-medium group-hover/item:text-foreground transition-colors tracking-tight ${locale === 'zh' ? '' : 'uppercase'}`}>{t.common.nav.education_courses}</span>
                                                 <span className="block text-[10px] text-muted-foreground">{t.common.nav.education_coursesDesc}</span>
                                             </div>
                                         </Link>
@@ -129,7 +133,7 @@ export const HeroHeader = () => {
                                             onClick={() => setEducationOpen(false)}>
                                             <GraduationCap className="size-5 mt-0.5 shrink-0 text-muted-foreground group-hover/item:text-foreground transition-colors" />
                                             <div>
-                                                <span className="text-sm font-medium group-hover/item:text-foreground transition-colors uppercase tracking-tight">{t.common.nav.education_webinars}</span>
+                                                <span className={`text-sm font-medium group-hover/item:text-foreground transition-colors tracking-tight ${locale === 'zh' ? '' : 'uppercase'}`}>{t.common.nav.education_webinars}</span>
                                                 <span className="block text-[10px] text-muted-foreground">{t.common.nav.education_webinarsDesc}</span>
                                             </div>
                                         </Link>
@@ -145,7 +149,9 @@ export const HeroHeader = () => {
                                 <button
                                     onClick={() => setResearchOpen(!researchOpen)}
                                     className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-                                    <span className={researchOpen ? 'text-primary' : ''}>{t.common.nav.research.title}</span>
+                                    <span className={(researchOpen ? 'text-primary' : '') + (locale === 'zh' ? '' : ' uppercase')}>
+                                        {t.common.nav.research.title}
+                                    </span>
                                     <ChevronDown className={`size-4 transition-transform duration-300 ${researchOpen ? 'rotate-180 text-primary' : ''}`} />
                                 </button>
 
@@ -157,7 +163,7 @@ export const HeroHeader = () => {
                                             onClick={() => setResearchOpen(false)}>
                                             <FlaskConical className="size-5 mt-0.5 shrink-0 text-muted-foreground group-hover/item:text-foreground transition-colors" />
                                             <div>
-                                                <span className="text-sm font-medium group-hover/item:text-foreground transition-colors uppercase tracking-tight">{t.common.nav.research.laboratory}</span>
+                                                <span className={`text-sm font-medium group-hover/item:text-foreground transition-colors tracking-tight ${locale === 'zh' ? '' : 'uppercase'}`}>{t.common.nav.research.laboratory}</span>
                                                 <span className="block text-[10px] text-muted-foreground">{t.common.nav.research.laboratoryDesc}</span>
                                             </div>
                                         </Link>
@@ -167,7 +173,7 @@ export const HeroHeader = () => {
                                             className="flex items-start gap-3 px-4 py-3 rounded-xl hover:bg-muted/30 transition-colors group/item">
                                             <FlaskConical className="size-5 mt-0.5 shrink-0 text-muted-foreground group-hover/item:text-foreground transition-colors" />
                                             <div>
-                                                <span className="text-sm font-medium group-hover/item:text-foreground transition-colors uppercase tracking-tight">{t.common.nav.research.kbGraphs}</span>
+                                                <span className={`text-sm font-medium group-hover/item:text-foreground transition-colors tracking-tight ${locale === 'zh' ? '' : 'uppercase'}`}>{t.common.nav.research.kbGraphs}</span>
                                                 <span className="block text-[10px] text-muted-foreground">{t.common.nav.research.kbGraphsDesc}</span>
                                             </div>
                                         </Link>
@@ -177,7 +183,7 @@ export const HeroHeader = () => {
                                             onClick={() => setResearchOpen(false)}>
                                             <FlaskConical className="size-5 mt-0.5 shrink-0 text-muted-foreground group-hover/item:text-foreground transition-colors" />
                                             <div>
-                                                <span className="text-sm font-medium group-hover/item:text-foreground transition-colors uppercase tracking-tight">{t.common.nav.research.blog}</span>
+                                                <span className={`text-sm font-medium group-hover/item:text-foreground transition-colors tracking-tight ${locale === 'zh' ? '' : 'uppercase'}`}>{t.common.nav.research.blog}</span>
                                                 <span className="block text-[10px] text-muted-foreground">{t.common.nav.research.blogDesc}</span>
                                             </div>
                                         </Link>

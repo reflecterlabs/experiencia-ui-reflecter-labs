@@ -5,7 +5,7 @@ import { type Locale, localeNames } from "@/lib/i18n/dictionaries";
 import { Globe } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
-const locales: Locale[] = ["es", "en", "pt"];
+const locales: Locale[] = ["es", "en", "pt", "zh"];
 
 export function LanguageSwitcher() {
   const { locale, setLocale } = useLocale();

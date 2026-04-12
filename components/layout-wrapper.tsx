@@ -2,9 +2,11 @@
 
 import { usePathname } from "next/navigation";
 import { HeroHeader } from "@/components/header";
-import FooterSection from "@/components/footer";
-import Dither from "@/components/Dither";
-import React from "react";
+import React, { Suspense } from "react";
+import dynamic from "next/dynamic";
+
+const FooterSection = dynamic(() => import("@/components/footer"), { ssr: true });
+const Dither = dynamic(() => import("@/components/Dither"), { ssr: false });
 
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -32,7 +34,9 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {
       </div>
       <HeroHeader />
       {children}
-      <FooterSection />
+      <Suspense fallback={null}>
+        <FooterSection />
+      </Suspense>
     </>
   );
 }
