@@ -25,6 +25,7 @@ export default function HeroSection() {
                         <div className="mx-auto max-w-2xl text-center lg:ml-0 lg:text-left">
                             <div className='mt-8 lg:mt-16'>
                                 <DecryptedText
+                                    key={locale + '-subtitle'}
                                     text={t.hero.subtitle}
                                     animateOn="view"
                                     revealDirection="start"
@@ -36,6 +37,7 @@ export default function HeroSection() {
                             </div>
                             <h1 className="max-w-2xl text-balance text-6xl font-semibold md:text-7xl xl:text-8xl tracking-tighter">
                                 <TextEffect
+                                    key={locale + '-title1'}
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
                                     as="span"
@@ -43,6 +45,7 @@ export default function HeroSection() {
                                     {t.hero.title1}
                                 </TextEffect>
                                 <TextEffect
+                                    key={locale + '-title2'}
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
                                     as="span"
@@ -51,6 +54,7 @@ export default function HeroSection() {
                                 </TextEffect>
                             </h1>
                             <TextEffect
+                                key={locale + '-desc'}
                                 per="line"
                                 preset="fade-in-blur"
                                 speedSegment={0.3}
@@ -91,8 +95,8 @@ export default function HeroSection() {
                 </div>
             </section>
 
-            {/* Supported by section - hidden */}
-            {/* <section className="bg-background pb-16 md:pb-32">
+            {/* Destacado section */}
+            <section className="bg-background pb-16 md:pb-32">
                 <AnimatedGroup
                     variants={{
                         container: {
@@ -108,41 +112,21 @@ export default function HeroSection() {
                     className="group relative m-auto max-w-6xl px-6"
                 >
                     <div className="flex flex-col items-center md:flex-row">
-                        <div className="md:max-w-44 md:border-r md:pr-6">
-                            <p className="text-end text-sm font-mono uppercase">{t.common.supportedBy}</p>
+                        <div className="md:max-w-44 md:border-r md:pr-6 mb-4 md:mb-0 w-full">
+                            <p className="text-center md:text-end text-sm font-mono uppercase text-muted-foreground">{t.hero.featuredIn}</p>
                         </div>
-                        <div className="relative py-6 md:w-[calc(100%-11rem)]">
-                            <InfiniteSlider
-                                speedOnHover={20}
-                                speed={40}
-                                gap={112}>
-                                <div className="flex items-center">
-                                    <GlobantLogoIcon size={20} aria-label="Globant Logo"
-                                        className='text-foreground mx-auto' />
-                                </div>
-                                <div className="flex items-center">
-                                    <GlobantLogoIcon size={20} aria-label="Globant Logo"
-                                        className='text-foreground mx-auto' />
-                                </div>
-                            </InfiniteSlider>
-                            <div
-                                className="bg-linear-to-r from-background absolute inset-y-0 left-0 w-20"></div>
-                            <div
-                                className="bg-linear-to-l from-background absolute inset-y-0 right-0 w-20"></div>
-                            <ProgressiveBlur
-                                className="pointer-events-none absolute left-0 top-0 h-full w-20"
-                                direction="left"
-                                blurIntensity={1}
-                            />
-                            <ProgressiveBlur
-                                className="pointer-events-none absolute right-0 top-0 h-full w-20"
-                                direction="right"
-                                blurIntensity={1}
-                            />
+                        <div className="relative py-2 md:py-6 md:w-[calc(100%-11rem)] md:pl-6 w-full">
+                            <Link href="/shanghai" target="_blank" rel="noopener noreferrer" className="block p-5 border border-primary/20 rounded-2xl bg-muted/10 hover:bg-muted/30 transition-all duration-300 text-center shadow-sm hover:shadow-primary/10 group/link">
+                                <div 
+                                    className="text-base md:text-lg font-medium text-foreground/90 inline-block"
+                                    dangerouslySetInnerHTML={{ __html: t.hero.shanghaiBanner }} 
+                                />
+                                <p className="text-xs md:text-sm text-primary mt-2 font-medium">{t.common.readMore} &rarr;</p>
+                            </Link>
                         </div>
                     </div>
                 </AnimatedGroup>
-            </section> */}
+            </section>
         </main>
     )
 }

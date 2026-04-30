@@ -55,7 +55,7 @@ export const HeroHeader = () => {
                             {/* Inicio */}
                             <Link
                                 href="/"
-                                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+                                className={"text-sm font-medium text-muted-foreground hover:text-primary transition-colors" + (locale === 'zh' ? '' : ' uppercase')}>
                                 {t.common.nav.home}
                             </Link>
 
@@ -225,7 +225,7 @@ export const HeroHeader = () => {
                                 {/* Inicio */}
                                 <Link
                                     href="/"
-                                    className="flex items-center px-6 py-3.5 text-base font-medium text-muted-foreground hover:text-primary hover:bg-muted/30 rounded-xl transition-colors"
+                                    className={"flex items-center px-6 py-3.5 text-base font-medium text-muted-foreground hover:text-primary hover:bg-muted/30 rounded-xl transition-colors" + (locale === 'zh' ? '' : ' uppercase')}
                                     onClick={closeAll}>
                                     {t.common.nav.home}
                                 </Link>

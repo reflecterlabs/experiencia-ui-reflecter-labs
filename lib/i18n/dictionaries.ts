@@ -96,11 +96,13 @@ export const dictionaries = {
       success: "¡Gracias! Te hemos añadido a la lista de espera.",
     },
     hero: {
-      subtitle: "Contratos inteligentes, dApps y soluciones DeFi",
+      subtitle: "Soluciones de Software, Productos Blockchain, Inteligencia Artificial y Agentes Autónomos",
       title1: "LABORATORIO",
-      title2: "BLOCKCHAIN",
+      title2: "TECNOLÓGICO",
       description: "Somos la disrupción de la centralización y el temor de los ecosistemas burocráticos.",
       grintaButton: "Conocer Grinta Protocol",
+      featuredIn: "Destacado en",
+      shanghaiBanner: "Grinta Protocol fue seleccionado para estar presente en el <span class='text-primary font-bold group-hover/link:underline'>Loop House de Shanghai</span> y en el <span class='text-primary font-bold group-hover/link:underline'>muShanghai en China.</span> Conocé el producto y se sponsor oficial."
     },
     features: {
       heading: "LOS PRINCIPIOS QUE GUÍAN CADA LÍNEA DE CÓDIGO QUE ESCRIBIMOS Y CADA DECISIÓN QUE TOMAMOS",
@@ -279,6 +281,54 @@ export const dictionaries = {
         { title: "6. Contacto", content: "Si tiene preguntas sobre nuestro uso de cookies, contate-nos en: contact@reflecterlabs.xyz" },
       ],
     },
+    shanghai: {
+      metadataTitle: "Grinta Protocol en Shanghai | Reflecter Labs",
+      metadataDesc: "Conoce cómo nuestro protocolo ganó en el Loop House de Shanghai con un modelo RL autónomo y una stablecoin innovadora.",
+      backHome: "Volver al inicio",
+      badge: "Ganadores - Loop House Shanghai",
+      title1: "El Triunfo de",
+      title2: "Grinta Protocol",
+      title3: "en China",
+      subtitle: "Nuestra carta de presentación ante el mundo: Cómo construimos un protocolo de stablecoin en Starknet controlado de manera totalmente autónoma por un modelo de Inteligencia Artificial de Aprendizaje por Refuerzo (RL), logrando el primer lugar en el evento muShanghai.",
+      section1: {
+        title: "La Revolución: El Gobernador Autónomo (PID-RL)",
+        desc: "El núcleo de nuestro éxito radica en el Agente PID-RL. Entrenamos un modelo pequeño y altamente eficiente (Qwen 2.5 de 1.5 billones de parámetros) capaz de ajustar dinámicamente las ganancias del controlador (Kp, Ki) de la stablecoin en función de la volatilidad del mercado de Bitcoin.",
+        card1Title: "Latencia Ultra-Baja",
+        card1Desc: "Respuestas en menos de 50ms, superando drásticamente a modelos comerciales masivos de API que demoran segundos.",
+        card2Title: "Detección de Emergencias",
+        card2Desc: "El agente identifica caídas abruptas del mercado y propone correcciones agresivas para mantener la paridad (peg) del token de inmediato.",
+        card3Title: "100% Self-Hosted",
+        card3Desc: "Los datos de gobernanza nunca abandonan la infraestructura. Completamente offline, sin dependencia de APIs externas.",
+        card4Title: "Reducción de Costos",
+        card4Desc: "Ejecución hasta 100 veces más económica que alternativas basadas en LLMs de gran tamaño, costando solo $0.001 por inferencia."
+      },
+      section2: {
+        title: "La Stablecoin y la Infraestructura Starknet",
+        desc1: "Grinta es un protocolo de stablecoin controlado por PID en la red Starknet. Emplea un mecanismo de precio de redención estilo HAI con un 'hook' en el DEX Ekubo que actualiza las tasas automáticamente en cada intercambio, dejando solo como procesos manuales los feeds del oráculo BTC/USD.",
+        desc2: "A nivel de arquitectura, el sistema se basa en 10 contratos inteligentes centrales auditados, gestionando la contabilidad, las subastas holandesas, la liquidación y una 'ParameterGuard' que valida los cambios dictados por el Agente de IA.",
+        whyWonTitle: "¿Por qué ganamos?",
+        whyWonDesc: "Logramos demostrar que la gobernanza de un protocolo DeFi crítico ya no necesita depender de votaciones humanas lentas o firmas manuales reactivas ante crisis. En la simulación presentada en Shanghai, ante un colapso del 20% del mercado cripto, nuestro Agente RL detectó el evento instantáneamente, ajustó la tasa de redención de la stablecoin (+25%) y logró recuperar la paridad al dólar de manera autónoma. Esto marca el hito inaugural hacia las Finanzas Verdaderamente Autónomas."
+      },
+      sponsors: {
+        title1: "Misión Shanghai 2026:",
+        title2: "Buscamos Sponsors",
+        desc1: "Únete a la expedición que representará la innovación blockchain de nuestra región en el continente asiático.",
+        desc2: "Los fondos recaudados se destinarán íntegramente a cubrir los gastos logísticos, incluyendo trámites de visa, vuelos y estadía desde el 10 de mayo al 16 de junio de 2026. Sé parte del ecosistema que está impulsando la autonomía financiera y destaca tu marca a nivel global frente a los principales actores de la industria.",
+        btn1Subtitle: "Para Empresas y Organizaciones",
+        btn1Title: "Descargar Propuesta (ES)",
+        btn2Subtitle: "Para Networks y Chains",
+        btn2Title: "Download Proposal (EN)"
+      },
+      partners: {
+        title: "Potenciales Partners y Aliados",
+        ariaLabel: "Sponsors and Partners"
+      },
+      cta: {
+        title: "¿Quieres construir el futuro con nosotros?",
+        desc: "Este reconocimiento en Shanghai es solo el primer paso de nuestra hoja de ruta. Estamos expandiendo el desarrollo de agentes autónomos y protocolos de alta fiabilidad.",
+        button: "Súmate a la Revolución"
+      }
+    },
     blogPosts: [] as BlogPost[],
   },
   en: {
@@ -357,11 +407,13 @@ export const dictionaries = {
       success: "Thank you! You've been added to the waitlist.",
     },
     hero: {
-      subtitle: "Smart contracts, dApps and DeFi solutions",
-      title1: "BLOCKCHAIN",
+      subtitle: "Software Solutions, Blockchain Products, Artificial Intelligence, and Autonomous Agents",
+      title1: "TECHNOLOGY",
       title2: "LABORATORY",
       description: "We are the disruption of centralization and the fear of bureaucratic ecosystems.",
       grintaButton: "Learn about Grinta Protocol",
+      featuredIn: "Featured in",
+      shanghaiBanner: "Grinta Protocol was selected to be present at the <span class='text-primary font-bold group-hover/link:underline'>Loop House in Shanghai</span> and at <span class='text-primary font-bold group-hover/link:underline'>muShanghai in China.</span> Learn about the product and become an official sponsor."
     },
     features: {
       heading: "THE PRINCIPLES THAT GUIDE EVERY LINE OF CODE WE WRITE AND EVERY DECISION WE MAKE",
@@ -540,6 +592,54 @@ export const dictionaries = {
         { title: "6. Contact Us", content: "If you have questions about our cookie use, contact us at: contact@reflecterlabs.xyz" },
       ],
     },
+    shanghai: {
+      metadataTitle: "Grinta Protocol in Shanghai | Reflecter Labs",
+      metadataDesc: "Discover how our protocol won at the Loop House in Shanghai with an autonomous RL model and an innovative stablecoin.",
+      backHome: "Back to home",
+      badge: "Winners - Loop House Shanghai",
+      title1: "The Triumph of",
+      title2: "Grinta Protocol",
+      title3: "in China",
+      subtitle: "Our global introduction: How we built a stablecoin protocol on Starknet fully autonomously controlled by a Reinforcement Learning (RL) AI model, achieving first place at the muShanghai event.",
+      section1: {
+        title: "The Revolution: The Autonomous Governor (PID-RL)",
+        desc: "The core of our success lies in the PID-RL Agent. We trained a small, highly efficient model (Qwen 2.5 with 1.5 billion parameters) capable of dynamically adjusting the stablecoin controller's gains (Kp, Ki) based on Bitcoin market volatility.",
+        card1Title: "Ultra-Low Latency",
+        card1Desc: "Responses in under 50ms, drastically outperforming massive commercial API models that take seconds.",
+        card2Title: "Emergency Detection",
+        card2Desc: "The agent identifies sudden market crashes and proposes aggressive corrections to immediately maintain the token peg.",
+        card3Title: "100% Self-Hosted",
+        card3Desc: "Governance data never leaves the infrastructure. Completely offline, with no reliance on external APIs.",
+        card4Title: "Cost Reduction",
+        card4Desc: "Execution up to 100x cheaper than large LLM alternatives, costing just $0.001 per inference."
+      },
+      section2: {
+        title: "The Stablecoin and Starknet Infrastructure",
+        desc1: "Grinta is a PID-controlled stablecoin protocol on the Starknet network. It uses a HAI-style redemption price mechanism with a 'hook' on the Ekubo DEX that automatically updates rates on every trade, leaving only BTC/USD oracle feeds as manual processes.",
+        desc2: "Architecturally, the system relies on 10 audited core smart contracts, managing accounting, Dutch auctions, liquidation, and a 'ParameterGuard' that validates changes dictated by the AI Agent.",
+        whyWonTitle: "Why did we win?",
+        whyWonDesc: "We proved that critical DeFi protocol governance no longer needs to rely on slow human voting or reactive manual signatures during crises. In the simulation presented in Shanghai, facing a 20% crypto market collapse, our RL Agent instantly detected the event, adjusted the stablecoin redemption rate (+25%), and autonomously recovered the dollar parity. This marks the inaugural milestone toward Truly Autonomous Finance."
+      },
+      sponsors: {
+        title1: "Shanghai Mission 2026:",
+        title2: "Seeking Sponsors",
+        desc1: "Join the expedition that will represent our region's blockchain innovation in the Asian continent.",
+        desc2: "The funds raised will be fully allocated to covering logistical expenses, including visa processing, flights, and accommodation from May 10th to June 16th, 2026. Be part of the ecosystem driving financial autonomy and highlight your brand globally to key industry players.",
+        btn1Subtitle: "For Companies and Organizations",
+        btn1Title: "Download Proposal (ES)",
+        btn2Subtitle: "For Networks and Chains",
+        btn2Title: "Download Proposal (EN)"
+      },
+      partners: {
+        title: "Potential Partners and Allies",
+        ariaLabel: "Sponsors and Partners"
+      },
+      cta: {
+        title: "Do you want to build the future with us?",
+        desc: "This recognition in Shanghai is just the first step on our roadmap. We are expanding the development of autonomous agents and highly reliable protocols.",
+        button: "Join the Revolution"
+      }
+    },
     blogPosts: [] as BlogPost[],
   },
   pt: {
@@ -618,11 +718,13 @@ export const dictionaries = {
       success: "Obrigado! Você foi adicionado à lista de espera.",
     },
     hero: {
-      subtitle: "Contratos inteligentes, dApps e soluções DeFi",
+      subtitle: "Soluções de Software, Produtos Blockchain, Inteligência Artificial e Agentes Autônomos",
       title1: "LABORATÓRIO",
-      title2: "BLOCKCHAIN",
+      title2: "TECNOLÓGICO",
       description: "Somos a disrupção da centralização e o temor dos ecossistemas burocráticos.",
       grintaButton: "Conhecer Grinta Protocol",
+      featuredIn: "Destaque em",
+      shanghaiBanner: "Grinta Protocol foi selecionado para estar presente no <span class='text-primary font-bold group-hover/link:underline'>Loop House em Xangai</span> e no <span class='text-primary font-bold group-hover/link:underline'>muShanghai na China.</span> Conheça o produto e seja um patrocinador oficial."
     },
     features: {
       heading: "OS PRINCÍPIOS QUE GUIAM CADA LINHA DE CÓDIGO QUE ESCREVEMOS E CADA DECISÃO QUE TOMAMOS",
@@ -801,6 +903,54 @@ export const dictionaries = {
         { title: "6. Contato", content: "Se tiver dúvidas sobre nosso uso de cookies, contate-nos em: contact@reflecterlabs.xyz" },
       ],
     },
+    shanghai: {
+      metadataTitle: "Grinta Protocol em Xangai | Reflecter Labs",
+      metadataDesc: "Descubra como nosso protocolo venceu na Loop House em Xangai com um modelo de RL autônomo e uma stablecoin inovadora.",
+      backHome: "Voltar ao início",
+      badge: "Vencedores - Loop House Xangai",
+      title1: "O Triunfo do",
+      title2: "Grinta Protocol",
+      title3: "na China",
+      subtitle: "Nosso cartão de visitas global: Como construímos um protocolo de stablecoin na Starknet controlado de forma totalmente autônoma por um modelo de Inteligência Artificial de Aprendizado por Reforço (RL), conquistando o primeiro lugar no evento muShanghai.",
+      section1: {
+        title: "A Revolução: O Governador Autônomo (PID-RL)",
+        desc: "O núcleo do nosso sucesso reside no Agente PID-RL. Treinamos um modelo pequeno e altamente eficiente (Qwen 2.5 de 1,5 bilhão de parâmetros) capaz de ajustar dinamicamente os ganhos do controlador da stablecoin (Kp, Ki) com base na volatilidade do mercado de Bitcoin.",
+        card1Title: "Latência Ultrabaixa",
+        card1Desc: "Respostas em menos de 50ms, superando drasticamente os modelos massivos de APIs comerciais que demoram segundos.",
+        card2Title: "Detecção de Emergências",
+        card2Desc: "O agente identifica quedas repentinas do mercado e propõe correções agressivas para manter imediatamente a paridade (peg) do token.",
+        card3Title: "100% Self-Hosted",
+        card3Desc: "Os dados de governança nunca saem da infraestrutura. Totalmente offline, sem dependência de APIs externas.",
+        card4Title: "Redução de Custos",
+        card4Desc: "Execução até 100 vezes mais econômica que alternativas baseadas em grandes LLMs, custando apenas US$ 0,001 por inferência."
+      },
+      section2: {
+        title: "A Stablecoin e a Infraestrutura Starknet",
+        desc1: "O Grinta é um protocolo de stablecoin controlado por PID na rede Starknet. Emprega um mecanismo de preço de resgate estilo HAI com um 'hook' na DEX Ekubo que atualiza automaticamente as taxas em cada negociação, deixando apenas os feeds de oráculo BTC/USD como processos manuais.",
+        desc2: "Arquitetonicamente, o sistema baseia-se em 10 contratos inteligentes principais auditados, gerenciando contabilidade, leilões holandeses, liquidação e um 'ParameterGuard' que valida as alterações ditadas pelo Agente de IA.",
+        whyWonTitle: "Por que vencemos?",
+        whyWonDesc: "Provamos que a governança de protocolos DeFi críticos não precisa mais depender de votações humanas lentas ou assinaturas manuais reativas durante crises. Na simulação apresentada em Xangai, diante de um colapso de 20% no mercado cripto, nosso Agente RL detectou instantaneamente o evento, ajustou a taxa de resgate da stablecoin (+25%) e recuperou a paridade com o dólar de forma autônoma. Isso marca o marco inaugural rumo às Finanças Verdadeiramente Autônomas."
+      },
+      sponsors: {
+        title1: "Missão Xangai 2026:",
+        title2: "Buscamos Patrocinadores",
+        desc1: "Junte-se à expedição que representará a inovação blockchain da nossa região no continente asiático.",
+        desc2: "Os fundos arrecadados serão integralmente destinados à cobertura de despesas logísticas, incluindo vistos, voos e hospedagem de 10 de maio a 16 de junho de 2026. Faça parte do ecossistema que impulsiona a autonomia financeira e destaque sua marca globalmente perante os principais atores do setor.",
+        btn1Subtitle: "Para Empresas e Organizações",
+        btn1Title: "Baixar Proposta (ES)",
+        btn2Subtitle: "Para Redes e Chains",
+        btn2Title: "Download Proposal (EN)"
+      },
+      partners: {
+        title: "Potenciais Parceiros e Aliados",
+        ariaLabel: "Patrocinadores e Parceiros"
+      },
+      cta: {
+        title: "Você quer construir o futuro conosco?",
+        desc: "Este reconhecimento em Xangai é apenas o primeiro passo do nosso roteiro. Estamos expandindo o desenvolvimento de agentes autônomos e protocolos altamente confiáveis.",
+        button: "Junte-se à Revolução"
+      }
+    },
     blogPosts: [
       {
         slug: "introduccion-starknet",
@@ -934,11 +1084,13 @@ export const dictionaries = {
       success: "谢谢！您已加入候补名单。",
     },
     hero: {
-      subtitle: "智能合约、dApps 和 DeFi 解决方案",
-      title1: "区块链",
+      subtitle: "软件解决方案、区块链产品、人工智能和自主代理",
+      title1: "技术",
       title2: "实验室",
       description: "我们是中心化的颠覆者，是官僚生态系统的恐惧。",
       grintaButton: "了解 Grinta Protocol",
+      featuredIn: "特别报道",
+      shanghaiBanner: "Grinta Protocol 入选 <span class='text-primary font-bold group-hover/link:underline'>上海 Loop House</span> 和 <span class='text-primary font-bold group-hover/link:underline'>中国 muShanghai</span>。了解产品并成为官方赞助商。"
     },
     features: {
       heading: "指导我们编写每一行代码和做出每一个决策的原则",
@@ -1116,6 +1268,54 @@ export const dictionaries = {
         { title: "5. 更新", content: "我们可能会定期更新本 Cookie 政策. 更改将发布在此页面上，并注有更新的修订日期。" },
         { title: "6. 联系我们", content: "如果您对我们使用 Cookie 有任何疑问，请联系我们：contact@reflecterlabs.xyz" },
       ],
+    },
+    shanghai: {
+      metadataTitle: "Grinta Protocol 在上海 | Reflecter Labs",
+      metadataDesc: "了解我们的协议如何凭借自主的强化学习(RL)模型和创新的稳定币在上海 Loop House 获胜。",
+      backHome: "返回首页",
+      badge: "获胜者 - 上海 Loop House",
+      title1: "的胜利",
+      title2: "Grinta Protocol",
+      title3: "在中国",
+      subtitle: "我们向世界的介绍：我们如何在 Starknet 上构建一个由强化学习 (RL) AI 模型完全自主控制的稳定币协议，并在 muShanghai 活动中获得第一名。",
+      section1: {
+        title: "革命：自主管理者 (PID-RL)",
+        desc: "我们成功的核心在于 PID-RL 代理。我们训练了一个小巧高效的模型（15亿参数的 Qwen 2.5），能够根据比特币市场的波动性动态调整稳定币控制器的参数 (Kp, Ki)。",
+        card1Title: "超低延迟",
+        card1Desc: "响应时间不到 50 毫秒，远远优于需要几秒钟的大型商业 API 模型。",
+        card2Title: "紧急情况检测",
+        card2Desc: "代理能识别市场突发崩盘，并提出积极的修正方案，以立即维持代币挂钩。",
+        card3Title: "100% 自托管",
+        card3Desc: "治理数据绝不离开基础设施。完全离线，不依赖任何外部 API。",
+        card4Title: "降低成本",
+        card4Desc: "执行成本比大型 LLM 替代方案低高达 100 倍，每次推理仅需 0.001 美元。"
+      },
+      section2: {
+        title: "稳定币与 Starknet 基础设施",
+        desc1: "Grinta 是 Starknet 网络上由 PID 控制的稳定币协议。它在 Ekubo DEX 上采用类似 HAI 的赎回价格机制和“挂钩(hook)”，在每次交易时自动更新利率，只保留 BTC/USD 预言机信息作为手动操作。",
+        desc2: "在架构层面上，该系统依赖于 10 个经过审计的核心智能合约，管理会计、荷兰式拍卖、清算，以及验证 AI 代理所做更改的“ParameterGuard”。",
+        whyWonTitle: "我们为什么赢了？",
+        whyWonDesc: "我们证明了关键的 DeFi 协议治理在危机期间不再需要依赖缓慢的人工投票或被动的手动签名。在上海展示的模拟中，面对加密市场 20% 的崩盘，我们的 RL 代理立即检测到事件，调整了稳定币的赎回率 (+25%)，并自主恢复了美元平价。这标志着真正自主金融的开端。"
+      },
+      sponsors: {
+        title1: "2026 上海任务：",
+        title2: "寻找赞助商",
+        desc1: "加入远征，代表我们地区在亚洲大陆展示区块链创新。",
+        desc2: "筹集的资金将全部用于支付物流费用，包括 2026 年 5 月 10 日至 6 月 16 日期间的签证办理、航班和住宿。成为推动金融自主生态系统的一部分，并向行业主要参与者全球展示您的品牌。",
+        btn1Subtitle: "致企业和组织",
+        btn1Title: "下载提案 (ES)",
+        btn2Subtitle: "致网络和链 (Chains)",
+        btn2Title: "Download Proposal (EN)"
+      },
+      partners: {
+        title: "潜在合作伙伴与盟友",
+        ariaLabel: "赞助商与合作伙伴"
+      },
+      cta: {
+        title: "你想和我们一起共创未来吗？",
+        desc: "在上海获得的这项认可是我们路线图的第一步。我们正在扩展自主代理和高可靠性协议的开发。",
+        button: "加入革命"
+      }
     },
     blogPosts: [] as BlogPost[],
   },
